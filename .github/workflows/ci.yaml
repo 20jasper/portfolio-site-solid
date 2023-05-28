@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+      - prod
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version-file: '.nvmrc'
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm ci
+        # - name: Run verify format
+        #   run: pnpm run verify-format
+      - name: Run lint
+        run: pnpm run lint
+      - name: Run verify types
+        run: pnpm run verify-types
+        # - name: Run test with coverage
+        #   run: pnpm run coverage
+      - name: Smoke test
+        run: 'pnpm run start:prod'
