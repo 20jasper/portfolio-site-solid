@@ -1,4 +1,5 @@
 {
+  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "strict": true,
     "target": "ESNext",
@@ -8,6 +9,9 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client", "@testing-library/jest-dom"]
+    "types": [
+      "vite/client",
+      "@testing-library/jest-dom"
+    ]
   }
 }
