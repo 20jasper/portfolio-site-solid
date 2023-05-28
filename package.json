@@ -9,8 +9,8 @@
     "start:prod": "pnpm run build && astro preview",
     "astro": "astro",
     "test": "vitest",
-    "lint": "eslint ./src/",
-    "lint:fix": "eslint ./src/ --fix",
+    "lint": "eslint './src/'",
+    "lint:fix": "eslint './src/' --fix",
     "verify-types": "tsc --noEmit"
   },
   "license": "MIT",
