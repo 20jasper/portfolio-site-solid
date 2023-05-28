@@ -4,9 +4,10 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "start": "vite",
-    "start:prod": "pnpm run build && vite preview",
+    "build": "astro build",
+    "start": "astro dev",
+    "start:prod": "pnpm run build && astro preview",
+    "astro": "astro",
     "test": "vitest"
   },
   "license": "MIT",
@@ -21,6 +22,7 @@
     "vitest": "^0.31.1"
   },
   "dependencies": {
+    "astro": "^2.5.5",
     "solid-js": "^1.7.5"
   }
 }
