@@ -10,7 +10,8 @@
     "astro": "astro",
     "test": "vitest",
     "lint": "eslint ./src/",
-    "lint:fix": "eslint ./src/ --fix"
+    "lint:fix": "eslint ./src/ --fix",
+    "verify-types": "tsc --noEmit"
   },
   "license": "MIT",
   "devDependencies": {
