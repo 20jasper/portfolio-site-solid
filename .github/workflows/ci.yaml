@@ -13,6 +13,7 @@ jobs:
       CI: true
 
     name: ci
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -36,5 +37,5 @@ jobs:
         run: pnpm run verify-types
         # - name: Run test with coverage
         #   run: pnpm run coverage
-      - name: Smoke test
-        run: 'pnpm run start:prod'
+      - name: Build project
+        run: pnpm run build
