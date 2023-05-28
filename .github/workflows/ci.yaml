@@ -32,7 +32,7 @@ jobs:
         # - name: Run verify format
         #   run: pnpm run verify-format
       - name: Run lint
-        run: pnpm run lint -- --max-warnings=0
+        run: pnpm run lint:ci
       - name: Run verify types
         run: pnpm run verify-types
         # - name: Run test with coverage
