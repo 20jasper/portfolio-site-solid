@@ -7,15 +7,18 @@
     "build": "astro build",
     "start": "astro dev",
     "start:prod": "pnpm run build && astro preview",
-    "lint": "eslint ./src/ && pnpm run lint:astro && pnpm run lint:style",
-    "lint:fix": "eslint ./src/ --fix && pnpm run lint:style:fix",
-    "lint:ci": "eslint ./src/ --max-warnings=0 && pnpm run lint:astro && pnpm run lint:style:ci",
+    "verify-types": "tsc --noEmit",
+    "test": "vitest",
+    "lint": "pnpm run lint:eslint && pnpm run lint:astro && pnpm run lint:style",
+    "lint:fix": "pnpm run lint:eslint:fix && pnpm run lint:style:fix",
+    "lint:ci": "pnpm run lint:eslint:ci && pnpm run lint:astro && pnpm run lint:style:ci",
     "lint:astro": "astro check",
     "lint:style": "stylelint \"**/*.css\" --allow-empty-input --cache",
     "lint:style:fix": "stylelint \"**/*.css\" --allow-empty-input --cache --fix",
     "lint:style:ci": "pnpm run lint:style -- --max-warnings=0",
-    "verify-types": "tsc --noEmit",
-    "test": "vitest"
+    "lint:eslint": "eslint ./src/",
+    "lint:eslint:fix": "eslint ./src/ --fix",
+    "lint:eslint:ci": "eslint ./src/ --max-warnings=0"
   },
   "devDependencies": {
     "@solidjs/testing-library": "^0.7.1",
