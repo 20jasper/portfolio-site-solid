@@ -11,6 +11,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:astro/recommended",
     "plugin:astro/jsx-a11y-strict",
+    "plugin:solid/typescript",
     "plugin:@typescript-eslint/strict",
   ],
   parser: "@typescript-eslint/parser",
@@ -20,7 +21,7 @@ module.exports = {
     jsx: true,
     project: "./tsconfig.json",
   },
-  plugins: ["@typescript-eslint", "only-warn"],
+  plugins: ["@typescript-eslint", "solid", "only-warn"],
   overrides: [
     {
       files: ["*.astro"],

@@ -23,6 +23,7 @@
     "eslint-plugin-astro": "^0.27.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-solid": "^0.12.1",
     "jsdom": "^22.1.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.9",
