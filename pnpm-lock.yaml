@@ -60,6 +60,9 @@ devDependencies:
   stylelint-plugin-logical-css:
     specifier: ^0.12.0
     version: 0.12.0(stylelint@15.6.2)
+  stylelint-rem-over-px:
+    specifier: ^1.0.0
+    version: 1.0.0(stylelint@15.6.2)
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -5144,6 +5147,15 @@ packages:
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0
     dependencies:
+      stylelint: 15.6.2
+    dev: true
+
+  /stylelint-rem-over-px@1.0.0(stylelint@15.6.2):
+    resolution: {integrity: sha512-Zdjn5gDIKHl+wcFquCB6ywWt4RzJt/5jOQRjd5yDkSNnTdTQchlXjpz6qw9HXRAeYoibXxR+FM/zWLFRs3LBOA==}
+    peerDependencies:
+      stylelint: '>= 8'
+    dependencies:
+      postcss-value-parser: 4.2.0
       stylelint: 15.6.2
     dev: true
 

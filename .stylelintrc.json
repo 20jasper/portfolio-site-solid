@@ -1,8 +1,13 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
-  "plugins": ["stylelint-csstree-validator", "stylelint-plugin-logical-css"],
+  "plugins": [
+    "stylelint-csstree-validator",
+    "stylelint-plugin-logical-css",
+    "stylelint-rem-over-px"
+  ],
   "rules": {
     "csstree/validator": true,
+    "rem-over-px/rem-over-px": true,
     "plugin/use-logical-properties-and-values": [
       true,
       { "severity": "warning", "disable-auto-fix": true }
