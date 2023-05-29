@@ -57,6 +57,9 @@ devDependencies:
   stylelint-csstree-validator:
     specifier: ^2.1.0
     version: 2.1.0(stylelint@15.6.2)
+  stylelint-plugin-logical-css:
+    specifier: ^0.12.0
+    version: 0.12.0(stylelint@15.6.2)
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -5132,6 +5135,15 @@ packages:
     dependencies:
       postcss: 8.4.23
       postcss-sorting: 7.0.1(postcss@8.4.23)
+      stylelint: 15.6.2
+    dev: true
+
+  /stylelint-plugin-logical-css@0.12.0(stylelint@15.6.2):
+    resolution: {integrity: sha512-e77wy6aX6Xpn6H/4FRmTc3TRsQY5rUn5h2YgkYK0hSoPExQXeF5vEBGEmwfSkt9v1MnavinQ90AZx1eX8cMyFw==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      stylelint: ^14.0.0 || ^15.0.0
+    dependencies:
       stylelint: 15.6.2
     dev: true
 

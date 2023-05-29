@@ -1,7 +1,15 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
-  "plugins": ["stylelint-csstree-validator"],
+  "plugins": ["stylelint-csstree-validator", "stylelint-plugin-logical-css"],
   "rules": {
-    "csstree/validator": true
+    "csstree/validator": true,
+    "plugin/use-logical-properties-and-values": [
+      true,
+      { "severity": "warning", "disable-auto-fix": true }
+    ],
+    "plugin/use-logical-units": [
+      true,
+      { "severity": "warning", "disable-auto-fix": true }
+    ]
   }
 }
