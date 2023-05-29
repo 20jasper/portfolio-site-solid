@@ -18,6 +18,5 @@
       "vite/client",
       "@testing-library/jest-dom"
     ],
-    "verbatimModuleSyntax": true,
   },
 }
