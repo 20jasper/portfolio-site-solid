@@ -8,11 +8,23 @@ module.exports = {
     node: true,
   },
   extends: [
+    // eslint recommended
     "eslint:recommended",
-    "plugin:astro/recommended",
-    "plugin:astro/jsx-a11y-strict",
+    "plugin:@typescript-eslint/eslint-recommended",
+    //typescript 
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
+    // solid/astro
+    "plugin:solid/typescript",
+    "plugin:astro/recommended",
+    // a11y
+    "plugin:astro/jsx-a11y-strict",
+    "plugin:jsx-a11y/strict",
   ],
+  rules: {
+    "@typescript-eslint/explicit-function-return-type": "error",
+  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "2021",
@@ -20,7 +32,7 @@ module.exports = {
     jsx: true,
     project: "./tsconfig.json",
   },
-  plugins: ["@typescript-eslint", "only-warn"],
+  plugins: ["@typescript-eslint", "solid", "jsx-a11y", "only-warn"],
   overrides: [
     {
       files: ["*.astro"],
