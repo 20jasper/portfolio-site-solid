@@ -7,9 +7,9 @@
     "build": "astro build",
     "start": "astro dev",
     "start:prod": "pnpm run build && astro preview",
-    "lint": "eslint ./src/",
+    "lint": "eslint ./src/ && astro check",
     "lint:fix": "eslint ./src/ --fix",
-    "lint:ci": "eslint ./src/ --max-warnings=0",
+    "lint:ci": "eslint ./src/ --max-warnings=0 && astro check",
     "verify-types": "tsc --noEmit",
     "test": "vitest"
   },

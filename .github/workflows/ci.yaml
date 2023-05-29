@@ -38,5 +38,3 @@ jobs:
         run: pnpm run verify-types
         # - name: Run test with coverage
         #   run: pnpm run coverage
-      - name: Build project
-        run: pnpm run build

@@ -11,9 +11,9 @@ Migrating to [Solid](https://www.solidjs.com/) will solve these problems with li
 - `build` build for production
 - `start` start dev server
 - `start:prod` build and start prod server
-- `lint` run eslint
+- `lint` check for eslint or astro errors/warnings
 - `lint:fix` fix any autofixable eslint warnings
-- `lint:ci` error on any warnings
+- `lint:ci` like `lint`, but errors on any eslint warnings
 - `verify-types` check for typescript errors
 - `test` run tests
 
