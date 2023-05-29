@@ -9,9 +9,14 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
     "types": [
       "vite/client",
       "@testing-library/jest-dom"
-    ]
-  }
+    ],
+  },
 }

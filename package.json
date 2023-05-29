@@ -1,5 +1,5 @@
 {
-  "name": "vite-template-solid",
+  "name": "portfolio-site-solid",
   "version": "0.0.0",
   "description": "",
   "type": "module",
@@ -7,12 +7,12 @@
     "build": "astro build",
     "start": "astro dev",
     "start:prod": "pnpm run build && astro preview",
-    "astro": "astro",
-    "test": "vitest",
-    "lint": "eslint ./src/",
-    "lint:fix": "eslint ./src/ --fix"
+    "lint": "eslint ./src/ && astro check",
+    "lint:fix": "eslint ./src/ --fix",
+    "lint:ci": "eslint ./src/ --max-warnings=0 && astro check",
+    "verify-types": "tsc --noEmit",
+    "test": "vitest"
   },
-  "license": "MIT",
   "devDependencies": {
     "@solidjs/testing-library": "^0.7.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -30,6 +30,7 @@
     "vitest": "^0.31.1"
   },
   "dependencies": {
+    "@astrojs/ts-plugin": "^1.0.6",
     "astro": "^2.5.5",
     "solid-js": "^1.7.5"
   }
