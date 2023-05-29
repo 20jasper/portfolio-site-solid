@@ -8,13 +8,23 @@ module.exports = {
     node: true,
   },
   extends: [
+    // eslint recommended
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    //typescript 
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
+    // solid/astro
+    "plugin:solid/typescript",
     "plugin:astro/recommended",
+    // a11y
     "plugin:astro/jsx-a11y-strict",
     "plugin:jsx-a11y/strict",
-    "plugin:solid/typescript",
-    "plugin:@typescript-eslint/strict",
   ],
+  rules: {
+    "@typescript-eslint/explicit-function-return-type": "error",
+  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "2021",
