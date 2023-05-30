@@ -30,10 +30,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
-	line-height: 1;
-}
-
 ol, ul {
 	list-style: none;
 }
@@ -67,10 +63,6 @@ input::-moz-focus-inner {
 		width: device-width;
 	}
 
-	body {
-		-ms-overflow-style: scrollbar;
-	}
-
 	@media screen and (width <= 480px) {
 		html, body {
 			min-width: 20rem;
@@ -87,9 +79,9 @@ input::-moz-focus-inner {
 	}
 
 	body {
-		background: rgb(2 0 19); 
-
-		/* rgb(25, 22, 59) */
+		background: rgb(2 0 19);
+		line-height: 1;
+		-ms-overflow-style: scrollbar; 
 	}
 
 		body.is-preload *, body.is-preload *::before, body.is-preload *::after {
