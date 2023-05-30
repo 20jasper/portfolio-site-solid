@@ -23,7 +23,8 @@ module.exports = {
     "plugin:jsx-a11y/strict",
   ],
   rules: {
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"]
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
