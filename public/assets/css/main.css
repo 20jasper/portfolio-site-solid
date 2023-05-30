@@ -255,7 +255,7 @@ input::-moz-focus-inner {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px rgb(255 152 0 / 30%b);
+		border-bottom: solid 1px rgb(255 152 0 / 30%);
 		margin: 2em 0;
 	}
 
@@ -2171,22 +2171,7 @@ input::-moz-focus-inner {
 		border-radius: 100%;
 	}
 
-	::input-placeholder {
-		color: rgb(224 225 252) !important;
-		opacity: 1.0;
-	}
-
-	:placeholder {
-		color: rgb(224 225 252) !important;
-		opacity: 1.0;
-	}
-
 	::placeholder {
-		color: rgb(224 225 252) !important;
-		opacity: 1.0;
-	}
-
-	:input-placeholder {
 		color: rgb(224 225 252) !important;
 		opacity: 1.0;
 	}
