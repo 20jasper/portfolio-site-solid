@@ -60,13 +60,6 @@ input::-moz-focus-inner {
 	border: 0;
 }
 
-input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-}
-
 /* Basic */
 
 	@viewport {
@@ -1853,10 +1846,6 @@ input, select, textarea {
 		height: 4.8125em;
 		padding: 0 2.5em;
 		border: 0;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
 		background-color: transparent;
 		box-shadow: inset 0 0 0 0.125rem rgb(255 152 0 / 20%);
 		color: rgb(241 230 216) !important;
@@ -2029,10 +2018,6 @@ input, select, textarea {
 		font-weight: 700;
 	}
 
-	textarea{
-		resize: vertical; 
-	}
-
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -2045,10 +2030,6 @@ input, select, textarea {
 		border: none;
 		border: solid 0.125rem rgb(255 152 0 / 15%);
 		border-radius: 0;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
 		background: rgb(255 152 0 / 2%);
 		color: inherit;
 		outline: 0;
@@ -2151,10 +2132,6 @@ input, select, textarea {
 		display: block;
 		width: 1em;
 		margin-right: -2em;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
 		float: left;
 		opacity: 0;
 	}
