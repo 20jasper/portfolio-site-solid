@@ -23,7 +23,8 @@ module.exports = {
     "plugin:jsx-a11y/strict",
   ],
   rules: {
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"]
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -32,7 +33,7 @@ module.exports = {
     jsx: true,
     project: "./tsconfig.json",
   },
-  plugins: ["@typescript-eslint", "solid", "jsx-a11y", "only-warn"],
+  plugins: ["@typescript-eslint", "solid", "astro", "jsx-a11y", "only-warn"],
   overrides: [
     {
       files: ["*.astro"],

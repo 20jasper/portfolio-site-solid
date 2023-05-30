@@ -11,7 +11,7 @@
     "test": "vitest",
     "lint": "pnpm run lint:eslint && pnpm run lint:astro && pnpm run lint:style",
     "lint:fix": "pnpm run lint:eslint:fix && pnpm run lint:style:fix",
-    "lint:ci": "pnpm run lint:eslint:ci && pnpm run lint:astro && pnpm run lint:style:ci",
+    "lint:ci": "pnpm run lint:eslint:ci && pnpm run lint:astro",
     "lint:astro": "astro check",
     "lint:style": "stylelint \"**/*.css\" --allow-empty-input --cache",
     "lint:style:fix": "stylelint \"**/*.css\" --allow-empty-input --cache --fix",
