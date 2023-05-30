@@ -32,7 +32,7 @@ module.exports = {
     jsx: true,
     project: "./tsconfig.json",
   },
-  plugins: ["@typescript-eslint", "solid", "jsx-a11y", "only-warn"],
+  plugins: ["@typescript-eslint", "solid", "astro", "jsx-a11y", "only-warn"],
   overrides: [
     {
       files: ["*.astro"],
