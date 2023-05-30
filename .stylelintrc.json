@@ -2,11 +2,15 @@
   "extends": ["stylelint-config-standard", "stylelint-config-idiomatic-order"],
   "plugins": [
     "stylelint-csstree-validator",
+    "stylelint-no-unsupported-browser-features",
     "stylelint-plugin-logical-css",
     "stylelint-rem-over-px"
   ],
   "rules": {
-    "csstree/validator": true,
+    "plugin/no-unsupported-browser-features": [true, {
+      "browsers": ["> 1%", "not dead"],
+      "ignore": []
+    }],
     "rem-over-px/rem-over-px": true,
     "property-no-vendor-prefix": [
       true,
