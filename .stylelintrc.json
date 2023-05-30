@@ -14,7 +14,9 @@
     "rem-over-px/rem-over-px": true,
     "property-no-vendor-prefix": [
       true,
-      { "disableFix": true, "ignoreProperties": ["-moz-transition"] }
+      {
+        "ignoreProperties": ["transition"]
+      }
     ],
     "declaration-empty-line-before": null,
     "plugin/use-logical-properties-and-values": [
