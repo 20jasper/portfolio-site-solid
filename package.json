@@ -15,7 +15,7 @@
     "lint:astro": "astro check",
     "lint:style": "stylelint \"**/*.css\" --allow-empty-input --cache",
     "lint:style:fix": "stylelint \"**/*.css\" --allow-empty-input --cache --fix",
-    "lint:style:ci": "pnpm run lint:style -- --max-warnings=0",
+    "lint:style:ci": "stylelint \"**/*.css\" --allow-empty-input --max-warnings=0",
     "lint:eslint": "eslint ./src/",
     "lint:eslint:fix": "eslint ./src/ --fix",
     "lint:eslint:ci": "eslint ./src/ --max-warnings=0"
