@@ -1,4 +1,5 @@
 ---
+import ContactForm from "./ContactForm.astro";
 
 ---
 <!-- Wrapper -->
@@ -339,43 +340,7 @@
 			<h2>About me</h2>
 			<p>Community taught software engineer with a proven track record of creating and implementing successful front and back end web applications. Skilled in solving problems with JavaScript, Node, MongoDB, Express, HTML, CSS, and React.</p>
 		</section>
-		<!-- Contact form -->
-		<span
-			class="navigation"
-			id="contactMe"
-		/>
-		<form
-			name="contact"
-			method="POST"
-			data-netlify="true"
-		>
-			<h2>Contact me</h2>
-			<p>I am currently looking for full time work</p>
-			<label>
-				Name
-				<input
-					type="text"
-					name="name"
-					required
-				>
-			</label>
-			<label>
-				Email
-				<input
-					type="email"
-					name="email"
-					required
-				>
-			</label>
-			<label>
-				Message
-				<textarea
-					name="message"
-					required
-				/>
-			</label>
-			<button type="submit">Submit</button>
-		</form>
+		<ContactForm isJobHunting={false} />
 		<!-- Footer -->
 		<section id="footer">
 			<p class="copyright">
