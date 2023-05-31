@@ -1945,45 +1945,10 @@ input::-moz-focus-inner {
 		margin: 0 0 2em;
 	}
 
-		form.search {
-			position: relative;
-			text-decoration: none;
+		form span{
+			margin-top: -1em;
+			margin-bottom: 3em;
 		}
-
-			form.search::before {
-				display: inline-block;
-				font-family: 'Font Awesome 5 Free';
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-style: normal;
-				font-variant: normal;
-				font-weight: 900;
-				line-height: 1;
-				text-rendering: auto;
-				text-transform: none !important;
-			}
-
-			form.search::before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				display: block;
-				width: 2.5em;
-				height: 2.75em;
-				color: rgb(224 225 252);
-				content: '\f002';
-				line-height: 2.75em;
-				text-align: center;
-			}
-
-			form.search > input:first-child {
-				padding-left: 2.5em;
-			}
-
-			form span{
-				margin-top: -1em;
-				margin-bottom: 3em;
-			}
 
 	label {
 		display: block;
@@ -3091,27 +3056,6 @@ input::-moz-focus-inner {
 				display: inline-block;
 				height: 2.5em;
 				vertical-align: middle;
-			}
-
-		#header #search {
-			overflow: hidden;
-			max-width: 0;
-			padding: 0;
-			opacity: 0;
-			-moz-transition: all 0.5s ease;
-			-webkit-transition: all 0.5s ease;
-			transition: all 0.5s ease;
-			white-space: nowrap;
-		}
-
-			#header #search input {
-				width: 12em;
-			}
-
-			#header #search.visible {
-				max-width: 12.5em;
-				padding: 0 0.5em 0 0;
-				opacity: 1;
 			}
 
 		@media screen and (width <= 980px) {
