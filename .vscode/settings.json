@@ -5,5 +5,8 @@
 		"astro",
 		"typescript",
 		"typescriptreact"
-	]
+	],
+	"eslint.enable": true,
+	"prettier.enable": true,
+	"stylelint.enable": true
 }
