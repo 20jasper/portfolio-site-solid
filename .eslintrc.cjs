@@ -46,7 +46,7 @@ module.exports = {
 				parser: '@typescript-eslint/parser',
 			},
 			plugins: ['solid'],
-			overrides: ['plugin:solid/typescript', 'plugin:jsx-a11y/strict'],
+			extends: ['plugin:solid/typescript', 'plugin:jsx-a11y/strict'],
 			rules: {
 				'solid/self-closing-comp': [
 					'warn',
