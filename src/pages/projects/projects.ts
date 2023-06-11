@@ -21,6 +21,27 @@ const projects: Project[] = [
 			'Mongoose',
 		],
 	},
+	{
+		demoUrl: 'https://budget-tracker.up.railway.app/',
+		gitHubUrl: 'https://github.com/20jasper/budget-tracker',
+		projectName: 'budget tracker',
+		description: 'Track your monthly expenses',
+		image: {
+			altText:
+				'A budget planner with a few test expenses. There is a form to add a new expense',
+			src: 'https://user-images.githubusercontent.com/78604367/188524492-5c3a6633-335d-4511-ac35-59dc073f138c.png',
+		},
+		techUsed: [
+			'JavaScript',
+			'CSS',
+			'HTML',
+			'Node',
+			'Express',
+			'EJS',
+			'MongoDB',
+			'Mongoose',
+		],
+	},
 ];
 
 export default projects;
