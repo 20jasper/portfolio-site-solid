@@ -9,7 +9,7 @@ on:
 jobs:
   ci:
     env:
-      # to tell pnpm this is a CI environment 
+      # to tell pnpm this is a CI environment
       CI: true
       ASTRO_TELEMETRY_DISABLED: true
 
@@ -30,9 +30,9 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm i
-        # - name: Run verify format
-        #   run: pnpm run verify-format
-      - name: Run lint
+      - name: Check formatting
+        run: pnpm run format:check
+      - name: Lint
         run: pnpm run lint:ci
       - name: Run verify types
         run: pnpm run verify-types

@@ -1,7 +1,9 @@
 ---
+import '../../public/assets/css/main.css'
+
 type Props = {
 	title: string;
-}
+};
 
 const { title } = Astro.props;
 ---
@@ -13,27 +15,30 @@ const { title } = Astro.props;
 	License: pixelarity.com/license
 -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{title}</title>
-    <link
-      rel="icon"
-      href="images/orangehtml.webp"
-    >
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    >
-    <meta
-      name="description"
-      content="Community taught software engineer with a proven track record of creating and implementing successful front and back end web applications."
-    >
-		<meta name="generator" content={Astro.generator} />
-    <link
-      rel="stylesheet"
-      href="assets/css/main.css"
-    >
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<title>{title}</title>
+		<link
+			rel="icon"
+			href="images/orangehtml.webp"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<meta
+			name="description"
+			content="Community taught software engineer with a proven track record of creating and implementing successful front and back end web applications."
+		/>
+		<meta
+			name="generator"
+			content={Astro.generator}
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/css/main.css"
+		/>
+	</head>
 	<body>
 		<slot />
 	</body>
