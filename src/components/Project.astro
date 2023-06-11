@@ -1,0 +1,56 @@
+---
+export type Props = {
+  demoUrl: string,
+  gitHubUrl: string,
+  projectName: string
+}
+
+const {projectName} = Astro.props
+---
+<article class="post">
+  <header>
+    <div class="title">
+      <h2>
+        <a
+          href="https://five-line-rhyme.up.railway.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+        {projectName}
+      </h2>
+      <p>A collection of poems only five lines long</p>
+    </div>
+  </header>
+  <a
+    href="https://five-line-rhyme.up.railway.app/"
+    class="image featured"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="https://user-images.githubusercontent.com/78604367/192409376-b33d90a4-9132-434e-bb98-b6867c74443b.png"
+      alt="The home page of five line rhyme. There are a few user–submitted poems to read"
+    >
+  </a>
+  <p>Tech Used: JavaScript, CSS, Node, Express, Pug, MongoDB, Mongoose</p>
+  <footer>
+    <ul class="actions">
+      <li>
+        <a
+          href="https://five-line-rhyme.up.railway.app/"
+          class="button large"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Live Demo</a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/20jasper/five-line-rhyme"
+          class="button large"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Github Repo</a>
+      </li>
+    </ul>
+  </footer>
+</article>
