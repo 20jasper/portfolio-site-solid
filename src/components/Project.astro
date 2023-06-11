@@ -2,10 +2,12 @@
 export type Props = {
   demoUrl: string,
   gitHubUrl: string,
-  projectName: string
+  projectName: string,
+  description: string,
+  image: {altText: string, src: string}
 }
 
-const {projectName, demoUrl, gitHubUrl} = Astro.props
+const {projectName, demoUrl, gitHubUrl, description, image} = Astro.props
 ---
 <article class="post">
   <header>
@@ -19,7 +21,7 @@ const {projectName, demoUrl, gitHubUrl} = Astro.props
         {projectName}
         </a>
       </h2>
-      <p>A collection of poems only five lines long</p>
+      <p>{description}</p>
     </div>
   </header>
   <a
@@ -29,8 +31,8 @@ const {projectName, demoUrl, gitHubUrl} = Astro.props
     rel="noopener noreferrer"
   >
     <img
-      src="https://user-images.githubusercontent.com/78604367/192409376-b33d90a4-9132-434e-bb98-b6867c74443b.png"
-      alt="The home page of five line rhyme. There are a few user–submitted poems to read"
+      src={image.src}
+      alt={image.altText}
     >
   </a>
   <p>Tech Used: JavaScript, CSS, Node, Express, Pug, MongoDB, Mongoose</p>
