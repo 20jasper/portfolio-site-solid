@@ -1,9 +1,10 @@
 ---
 type Props = {
 	isJobHunting: boolean;
+	pageIndex: number;
 };
 
-const { isJobHunting } = Astro.props;
+const { isJobHunting, pageIndex } = Astro.props;
 ---
 
 <span
@@ -11,7 +12,7 @@ const { isJobHunting } = Astro.props;
 	id="contactMe"
 >
 	<form
-		name="contact"
+		name=`contact-page-${pageIndex}`
 		method="POST"
 		data-netlify="true"
 	>

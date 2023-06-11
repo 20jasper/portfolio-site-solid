@@ -187,7 +187,10 @@ const { page }: Props = Astro.props;
 					MongoDB, Express, HTML, CSS, and React.
 				</p>
 			</section>
-			<ContactForm isJobHunting={false} />
+			<ContactForm
+				isJobHunting={false}
+				pageIndex={page.currentPage}
+			/>
 			<!-- Footer -->
 			<section id="footer">
 				<p class="copyright">
