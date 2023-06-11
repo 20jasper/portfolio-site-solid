@@ -4,10 +4,13 @@ export type Props = {
   gitHubUrl: string,
   projectName: string,
   description: string,
-  image: {altText: string, src: string}
+  image: {altText: string, src: string},
+  techUsed: string[]
 }
 
-const {projectName, demoUrl, gitHubUrl, description, image} = Astro.props
+const {projectName, demoUrl, gitHubUrl, description, image, techUsed} = Astro.props
+
+const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' })
 ---
 <article class="post">
   <header>
@@ -35,7 +38,9 @@ const {projectName, demoUrl, gitHubUrl, description, image} = Astro.props
       alt={image.altText}
     >
   </a>
-  <p>Tech Used: JavaScript, CSS, Node, Express, Pug, MongoDB, Mongoose</p>
+  <p>
+    Tech Used: {formatter.format(techUsed)}
+  </p>
   <footer>
     <ul class="actions">
       <li>
