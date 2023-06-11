@@ -3,40 +3,19 @@ import Layout from '../../layouts/Layout.astro';
 import Project from '../../components/Project.astro';
 import ContactForm from '../../components/ContactForm.astro';
 
-import type { Props as ProjectPage } from '../../components/Project.astro';
+import projects from './projects';
+
+import type { Props as ProjectProps } from '../../components/Project.astro';
 import type { GetStaticPathsResult, GetStaticPathsOptions, Page } from 'astro';
 
 type Props = {
-	page: Page<ProjectPage>;
+	page: Page<ProjectProps>;
 };
 
 export function getStaticPaths({
 	paginate,
 }: GetStaticPathsOptions): GetStaticPathsResult {
-	const projectPages: ProjectPage[] = [
-		{
-			demoUrl: 'https://five-line-rhyme.up.railway.app/',
-			gitHubUrl: 'https://github.com/20jasper/five-line-rhyme',
-			projectName: 'five line',
-			description: 'A collection of poems only five lines long',
-			image: {
-				altText:
-					'The home page of five line rhyme. There are a few user–submitted poems to read',
-				src: 'https://user-images.githubusercontent.com/78604367/192409376-b33d90a4-9132-434e-bb98-b6867c74443b.png',
-			},
-			techUsed: [
-				'JavaScript',
-				'CSS',
-				'Node',
-				'Express',
-				'Pug',
-				'MongoDB',
-				'Mongoose',
-			],
-		},
-	];
-
-	return paginate(projectPages, { pageSize: 3 });
+	return paginate(projects, { pageSize: 3 });
 }
 
 // Paginated data is in the `page` prop
