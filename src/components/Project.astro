@@ -5,24 +5,25 @@ export type Props = {
   projectName: string
 }
 
-const {projectName} = Astro.props
+const {projectName, demoUrl, gitHubUrl} = Astro.props
 ---
 <article class="post">
   <header>
     <div class="title">
       <h2>
         <a
-          href="https://five-line-rhyme.up.railway.app/"
+          href={demoUrl}
           target="_blank"
           rel="noopener noreferrer"
-        ></a>
+        >
         {projectName}
+        </a>
       </h2>
       <p>A collection of poems only five lines long</p>
     </div>
   </header>
   <a
-    href="https://five-line-rhyme.up.railway.app/"
+    href={demoUrl}
     class="image featured"
     target="_blank"
     rel="noopener noreferrer"
@@ -37,7 +38,7 @@ const {projectName} = Astro.props
     <ul class="actions">
       <li>
         <a
-          href="https://five-line-rhyme.up.railway.app/"
+          href={demoUrl}
           class="button large"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +46,7 @@ const {projectName} = Astro.props
       </li>
       <li>
         <a
-          href="https://github.com/20jasper/five-line-rhyme"
+          href={gitHubUrl}
           class="button large"
           target="_blank"
           rel="noopener noreferrer"
