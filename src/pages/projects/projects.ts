@@ -4,7 +4,6 @@ const projects: Project[] = [
 	{
 		projectName: 'five line rhyme',
 		demoUrl: 'https://five-line-rhyme.up.railway.app/',
-		gitHubUrl: 'https://github.com/20jasper/five-line-rhyme',
 		description: 'A collection of poems only five lines long',
 		image: {
 			src: 'https://user-images.githubusercontent.com/78604367/192409376-b33d90a4-9132-434e-bb98-b6867c74443b.png',
@@ -20,11 +19,11 @@ const projects: Project[] = [
 			'MongoDB',
 			'Mongoose',
 		],
+		gitHubUrl: 'https://github.com/20jasper/five-line-rhyme',
 	},
 	{
 		projectName: 'budget tracker',
 		demoUrl: 'https://budget-tracker.up.railway.app/',
-		gitHubUrl: 'https://github.com/20jasper/budget-tracker',
 		description: 'Track your monthly expenses',
 		image: {
 			src: 'https://user-images.githubusercontent.com/78604367/188524492-5c3a6633-335d-4511-ac35-59dc073f138c.png',
@@ -41,6 +40,19 @@ const projects: Project[] = [
 			'MongoDB',
 			'Mongoose',
 		],
+		gitHubUrl: 'https://github.com/20jasper/budget-tracker',
+	},
+	{
+		projectName: 'PAIHS Portfolios',
+		demoUrl: 'https://paihsportfolios.netlify.app/',
+		description: 'Track your monthly expenses',
+		image: {
+			src: 'https://user-images.githubusercontent.com/78604367/190449712-5d834ec4-354c-4a35-953b-47ff17f5c5b1.png',
+			altText:
+				'A large purple crest with hands handing the globe below a large purple heading that says PAIHS portfolios',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: 'https://github.com/20jasper/PAIHS-portfolio-page',
 	},
 ];
 
