@@ -1,0 +1,35 @@
+---
+import type { GetStaticPathsResult, GetStaticPathsOptions, Page} from "astro";
+
+type Props = {
+  page: Page
+}
+
+type ProjectPage = {
+  astronaut: string
+}
+
+export function getStaticPaths({ paginate }: GetStaticPathsOptions): GetStaticPathsResult {
+  const astronautPages: ProjectPage[] = [{
+    astronaut: 'Neil Armstrong',
+  }, {
+    astronaut: 'Buzz Aldrin',
+  }, {
+    astronaut: 'Sally Ride',
+  }, {
+    astronaut: 'John Glenn',
+  }];
+
+  return paginate(astronautPages, { pageSize: 2 });
+}
+
+// Paginated data is in the `page` prop
+const { page }: Props = Astro.props;
+---
+
+<!--Display the current page number. Astro.params.page can also be used!-->
+<h1>Page {page.currentPage}</h1>
+<ul>
+  <!--List the array of astronaut info-->
+  {page.data.map(({ astronaut }) => <li>{astronaut}</li>)}
+</ul>
