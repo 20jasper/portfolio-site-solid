@@ -54,6 +54,18 @@ const projects: Project[] = [
 		techUsed: ['JavaScript', 'CSS', 'HTML'],
 		gitHubUrl: 'https://github.com/20jasper/PAIHS-portfolio-page',
 	},
+	{
+		projectName: 'Full Stack Interview Question Generator',
+		demoUrl: 'https://full-stack-interview-prep.up.railway.app/',
+		description: 'Study for a full stack web development interview',
+		image: {
+			src: 'images/fullStackInterviewQuestions.mp4',
+			altText:
+				'An animation of a button being clicked and a question showing up',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML', 'Node'],
+		gitHubUrl: 'https://github.com/20jasper/interview-question-api',
+	},
 ];
 
 export default projects;
