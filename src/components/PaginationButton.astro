@@ -1,13 +1,12 @@
 ---
 type Props = {
+	/** a url or `undefined` if there are no more pages */
 	href: string | undefined;
 	nextOrPrevious: 'next' | 'previous';
 };
 
 const { href, nextOrPrevious } = Astro.props;
-
 const classList = ['button', 'large', nextOrPrevious];
-
 const buttonText = `${nextOrPrevious} Page`;
 ---
 
