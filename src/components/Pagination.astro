@@ -11,17 +11,17 @@ const { prev: previousHref, next: nextHref } = page.url;
 ---
 
 <nav aria-label="Pagination">
-	<ul class="actions pagination">
+	<ul class="actions">
 		<li>
 			<PaginationButton
 				href={previousHref}
-				nextOrPrevious="previous"
+				buttonText="previous page"
 			/>
 		</li>
 		<li>
 			<PaginationButton
 				href={nextHref}
-				nextOrPrevious="next"
+				buttonText="next page"
 			/>
 		</li>
 	</ul>
