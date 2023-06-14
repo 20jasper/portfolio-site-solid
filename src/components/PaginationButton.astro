@@ -1,0 +1,25 @@
+---
+type Props = {
+	href: string | undefined;
+	nextOrPrevious: 'next' | 'previous';
+};
+
+const { href, nextOrPrevious } = Astro.props;
+
+const classList = ['button', 'large', nextOrPrevious];
+
+const buttonText = `${nextOrPrevious} Page`;
+---
+
+{
+	href === undefined ? (
+		<div class:list={[...classList, 'disabled']}>{buttonText}</div>
+	) : (
+		<a
+			{href}
+			class:list={classList}
+		>
+			{buttonText}
+		</a>
+	)
+}

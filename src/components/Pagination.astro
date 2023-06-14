@@ -1,0 +1,28 @@
+---
+import type { Page } from 'astro';
+import PaginationButton from './PaginationButton.astro';
+
+type Props = {
+	page: Page;
+};
+
+const { page } = Astro.props;
+const { prev: previousHref, next: nextHref } = page.url;
+---
+
+<nav aria-label="Pagination">
+	<ul class="actions pagination">
+		<li>
+			<PaginationButton
+				href={previousHref}
+				nextOrPrevious="previous"
+			/>
+		</li>
+		<li>
+			<PaginationButton
+				href={nextHref}
+				nextOrPrevious="next"
+			/>
+		</li>
+	</ul>
+</nav>
