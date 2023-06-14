@@ -2308,14 +2308,11 @@ input::-moz-focus-inner {
 /* Actions */
 
 	ul.actions {
-		display: -moz-flex;
 		display: flex;
-		display: -ms-flex;
-		display: flex;
-		padding-left: 0;
-		margin-left: -1em;
 		cursor: default;
 		list-style: none;
+		margin-inline-start: -1em;
+		padding-inline-start: 0;
 	}
 
 		ul.actions li {
@@ -2324,18 +2321,18 @@ input::-moz-focus-inner {
 		}
 
 		ul.actions.special {
-			width: 100%;
 			justify-content: center;
-			margin-left: 0;
+			inline-size: 100%;
+			margin-inline-start: 0;
 		}
 
 			ul.actions.special li:first-child {
-				padding-left: 0;
+				padding-inline-start: 0;
 			}
 
 		ul.actions.stacked {
 			flex-direction: column;
-			margin-left: 0;
+			margin-inline-start: 0;
 		}
 
 			ul.actions.stacked li {
@@ -2343,48 +2340,48 @@ input::-moz-focus-inner {
 			}
 
 				ul.actions.stacked li:first-child {
-					padding-top: 0;
+					padding-block-start: 0;
 				}
 
 		ul.actions.fit {
-			width: calc(100% + 1em);
+			inline-size: calc(100% + 1em);
 		}
 
 			ul.actions.fit li {
-				width: 100%;
 				flex-grow: 1;
 				flex-shrink: 1;
+				inline-size: 100%;
 			}
 
 				ul.actions.fit li > * {
-					width: 100%;
+					inline-size: 100%;
 				}
 
 			ul.actions.fit.stacked {
-				width: 100%;
+				inline-size: 100%;
 			}
 
 		@media screen and (width <= 480px) {
 			ul.actions:not(.fixed) {
-				width: 100% !important;
 				flex-direction: column;
-				margin-left: 0;
+				inline-size: 100% !important;
+				margin-inline-start: 0;
 			}
 
 				ul.actions:not(.fixed) li {
-					width: 100%;
 					flex-grow: 1;
 					flex-shrink: 1;
 					padding: 1em 0 0;
+					inline-size: 100%;
 					text-align: center;
 				}
 
 					ul.actions:not(.fixed) li > * {
-						width: 100%;
+						inline-size: 100%;
 					}
 
 					ul.actions:not(.fixed) li:first-child {
-						padding-top: 0;
+						padding-block-start: 0;
 					}
 
 					ul.actions:not(.fixed) li input[type="submit"],
@@ -2392,7 +2389,7 @@ input::-moz-focus-inner {
 					ul.actions:not(.fixed) li input[type="button"],
 					ul.actions:not(.fixed) li button,
 					ul.actions:not(.fixed) li .button {
-						width: 100%;
+						inline-size: 100%;
 					}
 
 						ul.actions:not(.fixed) li input[type="submit"].icon::before,
@@ -2400,9 +2397,8 @@ input::-moz-focus-inner {
 						ul.actions:not(.fixed) li input[type="button"].icon::before,
 						ul.actions:not(.fixed) li button.icon::before,
 						ul.actions:not(.fixed) li .button.icon::before {
-							margin-left: -0.5em;
+							margin-inline-start: -0.5em;
 						}
-
 		}
 
 /* Icons */
