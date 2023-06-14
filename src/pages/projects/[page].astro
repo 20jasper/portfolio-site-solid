@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Project from '../../components/Project.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import Pagination from '../../components/Pagination.astro';
 
 import projects from './projects';
 
@@ -113,19 +114,7 @@ const { page }: Props = Astro.props;
 		<div id="main">
 			{page.data.map((project) => <Project {...project} />)}
 
-			<!-- Pagination -->
-			<ul class="actions pagination">
-				<li>
-					<div class="disabled button large previous">Previous Page</div>
-				</li>
-				<li>
-					<a
-						href="page2.html"
-						class="button large next"
-						>Next Page</a
-					>
-				</li>
-			</ul>
+			<Pagination {page} />
 		</div>
 		<!-- Sidebar -->
 		<section id="sidebar">
