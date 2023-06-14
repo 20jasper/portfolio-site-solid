@@ -1,10 +1,14 @@
 ---
-type Image = { mediaType: 'image'; altText: string; src: string };
+type Image = {
+	mediaType: 'image';
+	altText: string;
+	src: string;
+};
 type Video = {
 	mediaType: 'video';
 	altText: string;
 	src: string;
-	videoType: string;
+	srcType: string;
 };
 
 export type Props = {
@@ -16,14 +20,8 @@ export type Props = {
 	techUsed: string[];
 };
 
-const {
-	projectName,
-	demoUrl,
-	gitHubUrl,
-	description,
-	media: media,
-	techUsed,
-} = Astro.props;
+const { projectName, demoUrl, gitHubUrl, description, media, techUsed } =
+	Astro.props;
 
 const formatter = new Intl.ListFormat('en', {
 	style: 'long',
@@ -67,7 +65,7 @@ const formatter = new Intl.ListFormat('en', {
 				>
 					<source
 						src={media.src}
-						type={media.videoType}
+						type={media.srcType}
 					/>
 					Sorry, Your browser doesn't support HTML5 video.
 				</video>

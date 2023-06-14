@@ -64,7 +64,7 @@ const projects: Project[] = [
 		description: 'Study for a full stack web development interview',
 		media: {
 			mediaType: 'video',
-			videoType: 'video/mp4',
+			srcType: 'video/mp4',
 			src: fullStackInterviewQuestions,
 			altText:
 				'An animation of a button being clicked and a question showing up',
