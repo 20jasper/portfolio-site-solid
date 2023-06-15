@@ -1,0 +1,23 @@
+---
+type Props = {
+	/** a url or `undefined` if there are no more pages */
+	href: string | undefined;
+	buttonText: string;
+};
+
+const { href, buttonText } = Astro.props;
+const defaultClassList = ['button', 'large'];
+---
+
+{
+	href === undefined ? (
+		<div class:list={[...defaultClassList, 'disabled']}>{buttonText}</div>
+	) : (
+		<a
+			{href}
+			class:list={defaultClassList}
+		>
+			{buttonText}
+		</a>
+	)
+}
