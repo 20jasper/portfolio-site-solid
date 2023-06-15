@@ -1,24 +1,7 @@
 ---
-type Image = {
-	mediaType: 'image';
-	altText: string;
-	src: string;
-};
-type Video = {
-	mediaType: 'video';
-	altText: string;
-	src: string;
-	srcType: string;
-};
+import type { Project } from '../pages/projects/projects';
 
-export type Props = {
-	demoUrl: string;
-	gitHubUrl: string;
-	projectName: string;
-	description: string;
-	media: Image | Video;
-	techUsed: string[];
-};
+type Props = Project;
 
 const { projectName, demoUrl, gitHubUrl, description, media, techUsed } =
 	Astro.props;

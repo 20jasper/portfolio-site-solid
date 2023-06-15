@@ -1,5 +1,25 @@
-import type { Props as Project } from '../../components/Project.astro';
 import fullStackInterviewQuestions from '../../../public/images/fullStackInterviewQuestions.mp4';
+
+type Image = {
+	mediaType: 'image';
+	altText: string;
+	src: string;
+};
+type Video = {
+	mediaType: 'video';
+	altText: string;
+	src: string;
+	srcType: string;
+};
+
+export type Project = {
+	demoUrl: string;
+	gitHubUrl: string;
+	projectName: string;
+	description: string;
+	media: Image | Video;
+	techUsed: string[];
+};
 
 const projects: Project[] = [
 	{
