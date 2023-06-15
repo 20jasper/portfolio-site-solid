@@ -1,0 +1,83 @@
+---
+import type { Project } from '../pages/projects/projects';
+
+type Props = Project;
+
+const { projectName, demoUrl, gitHubUrl, description, media, techUsed } =
+	Astro.props;
+
+const formatter = new Intl.ListFormat('en', {
+	style: 'long',
+	type: 'conjunction',
+});
+---
+
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>
+				<a
+					href={demoUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{projectName}
+				</a>
+			</h2>
+			<p>{description}</p>
+		</div>
+	</header>
+	<a
+		href={demoUrl}
+		class="image featured"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		{
+			media.mediaType === 'image' ? (
+				<img
+					src={media.src}
+					alt={media.altText}
+				/>
+			) : (
+				<video
+					muted
+					loop
+					autoplay
+					aria-label={media.altText}
+				>
+					<source
+						src={media.src}
+						type={media.srcType}
+					/>
+					Sorry, Your browser doesn't support HTML5 video.
+				</video>
+			)
+		}
+	</a>
+	<p>
+		Tech Used: {formatter.format(techUsed)}
+	</p>
+	<footer>
+		<ul class="actions">
+			<li>
+				<a
+					href={demoUrl}
+					class="button large"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Live Demo</a
+				>
+			</li>
+			<li>
+				<a
+					href={gitHubUrl}
+					class="button large"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Github Repo</a
+				>
+			</li>
+		</ul>
+	</footer>
+</article>
