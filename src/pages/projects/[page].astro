@@ -19,11 +19,9 @@ export function getStaticPaths({
 	return paginate(projects, { pageSize: 3 });
 }
 
-// Paginated data is in the `page` prop
 const { page }: Props = Astro.props;
 ---
 
-<!--Display the current page number. Astro.params.page can also be used!--><!-- <h1>Page {page.currentPage}</h1> -->
 <Layout title="Jacob Asper">
 	<!-- Wrapper -->
 	<div id="wrapper">
