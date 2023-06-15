@@ -5,6 +5,9 @@ on:
     branches:
       - main
       - prod
+  push:
+    branches:
+     - main
 
 jobs:
   ci:
