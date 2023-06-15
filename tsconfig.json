@@ -9,11 +9,35 @@
 		"esModuleInterop": true,
 		"jsx": "preserve",
 		"jsxImportSource": "solid-js",
+		"baseUrl": ".",
+		"paths": {
+			"@components/*": [
+				"src/components/*"
+			],
+			"@css/*": [
+				"src/css/*"
+			],
+			"@layouts/*": [
+				"src/layouts/*"
+			],
+			"@pages/*": [
+				"src/pages/*"
+			],
+			"@scripts/*": [
+				"src/scripts/*"
+			],
+			"@images/*": [
+				"src/images/*"
+			]
+		},
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
 		],
-		"types": ["vite/client", "@testing-library/jest-dom"]
+		"types": [
+			"vite/client",
+			"@testing-library/jest-dom"
+		]
 	}
 }
