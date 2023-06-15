@@ -7,7 +7,7 @@ on:
       - prod
   push:
     branches:
-     - main
+      - main
 
 jobs:
   ci:
