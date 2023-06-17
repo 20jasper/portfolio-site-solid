@@ -1,5 +1,6 @@
 import fullStackInterviewQuestions from '@images/fullStackInterviewQuestions.mp4';
 import ticTacToe from '@images/ticTacToe.mp4';
+import theMidnightDuck from '@images/theMidnightDuck.jpg';
 
 type Image = {
 	mediaType: 'image';
@@ -15,7 +16,8 @@ type Video = {
 
 export type Project = {
 	demoUrl: string;
-	gitHubUrl: string;
+	/** string if url exists, null otherwise */
+	gitHubUrl: string | null;
 	projectName: string;
 	description: string;
 	media: Image | Video;
@@ -132,6 +134,18 @@ const projects: Project[] = [
 		},
 		techUsed: ['JavaScript', 'CSS', 'HTML', 'React', 'D3'],
 		gitHubUrl: 'https://github.com/20jasper/SVG-faces',
+	},
+	{
+		projectName: 'The Midnight Duck',
+		demoUrl: 'https://themidnightduck.netlify.app/',
+		description: 'A site for a late-night bar and grill',
+		media: {
+			mediaType: 'image',
+			src: theMidnightDuck,
+			altText: 'Thumbnail for The Midnight Duck site',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: null,
 	},
 ];
 
