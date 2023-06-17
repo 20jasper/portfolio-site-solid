@@ -119,6 +119,20 @@ const projects: Project[] = [
 		techUsed: ['JavaScript', 'CSS', 'HTML'],
 		gitHubUrl: 'https://github.com/20jasper/tic-tac-toe',
 	},
+	{
+		projectName: 'SVG faces',
+		demoUrl: 'https://svg-faces.netlify.app/',
+		description:
+			'Modular faces built with SVG, HTML, CSS, JavaScript, React, and D3.js',
+		media: {
+			mediaType: 'image',
+			src: 'https://raw.githubusercontent.com/20jasper/SVG-faces/main/SVG-faces.webp',
+			altText:
+				'a site with a a yellow happy face, a blue sad face, and a red mad face',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML', 'React', 'D3'],
+		gitHubUrl: 'https://github.com/20jasper/SVG-faces',
+	},
 ];
 
 export default projects;
