@@ -1,6 +1,7 @@
 import fullStackInterviewQuestions from '@images/fullStackInterviewQuestions.mp4';
 import ticTacToe from '@images/ticTacToe.mp4';
 import theMidnightDuck from '@images/theMidnightDuck.jpg';
+import ronaldosBurgers from '@images/ronaldosBurgers.jpg';
 
 type Image = {
 	mediaType: 'image';
@@ -144,6 +145,19 @@ const projects: Project[] = [
 			src: theMidnightDuck,
 			altText:
 				'The Midnight Duck site. A food and drink menu section is visible below the title',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: null,
+	},
+	{
+		projectName: "Ronaldo's Burgers",
+		demoUrl: 'https://ronaldosburgers.netlify.app/',
+		description: 'A site for an elegant burger restaurant',
+		media: {
+			mediaType: 'image',
+			src: ronaldosBurgers,
+			altText:
+				"A landing page for Ronaldo's Burgers. An image of cheeseburger on a cutting board is to the right of the slogan",
 		},
 		techUsed: ['JavaScript', 'CSS', 'HTML'],
 		gitHubUrl: null,
