@@ -10,7 +10,8 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
+	export type CollectionEntry<C extends keyof AnyEntryMap> =
+		AnyEntryMap[C][keyof AnyEntryMap[C]];
 
 	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
 	/**
@@ -52,7 +53,10 @@ declare module 'astro:content' {
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
 		| import('astro/zod').ZodUnion<import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
+		| import('astro/zod').ZodDiscriminatedUnion<
+				string,
+				import('astro/zod').AnyZodObject[]
+		  >
 		| import('astro/zod').ZodIntersection<
 				import('astro/zod').AnyZodObject,
 				import('astro/zod').AnyZodObject
@@ -74,7 +78,9 @@ declare module 'astro:content' {
 		schema?: S | ((context: SchemaContext) => S);
 	};
 
-	type CollectionConfig<S> = ContentCollectionConfig<S> | DataCollectionConfig<S>;
+	type CollectionConfig<S> =
+		| ContentCollectionConfig<S>
+		| DataCollectionConfig<S>;
 
 	export function defineCollection<S extends BaseSchema>(
 		input: CollectionConfig<S>
@@ -96,12 +102,15 @@ declare module 'astro:content' {
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
 
-	export function getDataEntryById<C extends keyof DataEntryMap, E extends keyof DataEntryMap[C]>(
-		collection: C,
-		entryId: E
-	): Promise<CollectionEntry<C>>;
+	export function getDataEntryById<
+		C extends keyof DataEntryMap,
+		E extends keyof DataEntryMap[C]
+	>(collection: C, entryId: E): Promise<CollectionEntry<C>>;
 
-	export function getCollection<C extends keyof AnyEntryMap, E extends CollectionEntry<C>>(
+	export function getCollection<
+		C extends keyof AnyEntryMap,
+		E extends CollectionEntry<C>
+	>(
 		collection: C,
 		filter?: (entry: CollectionEntry<C>) => entry is E
 	): Promise<E[]>;
@@ -183,17 +192,14 @@ declare module 'astro:content' {
 	): import('astro/zod').ZodEffects<import('astro/zod').ZodString, never>;
 
 	type ReturnTypeOrOriginal<T> = T extends (...args: any[]) => infer R ? R : T;
-	type InferEntrySchema<C extends keyof AnyEntryMap> = import('astro/zod').infer<
-		ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
-	>;
+	type InferEntrySchema<C extends keyof AnyEntryMap> =
+		import('astro/zod').infer<
+			ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
+		>;
 
-	type ContentEntryMap = {
-		
-	};
+	type ContentEntryMap = {};
 
-	type DataEntryMap = {
-		
-	};
+	type DataEntryMap = {};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
