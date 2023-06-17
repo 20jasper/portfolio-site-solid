@@ -142,7 +142,8 @@ const projects: Project[] = [
 		media: {
 			mediaType: 'image',
 			src: theMidnightDuck,
-			altText: 'Thumbnail for The Midnight Duck site',
+			altText:
+				'The Midnight Duck site. A food and drink menu section is visible below the title',
 		},
 		techUsed: ['JavaScript', 'CSS', 'HTML'],
 		gitHubUrl: null,
