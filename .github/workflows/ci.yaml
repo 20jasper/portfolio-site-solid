@@ -39,5 +39,7 @@ jobs:
         run: pnpm run lint:ci
       - name: Run verify types
         run: pnpm run verify-types
+      - name: Build project
+        run: pnpm run build
         # - name: Run test with coverage
         #   run: pnpm run coverage
