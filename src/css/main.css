@@ -175,6 +175,7 @@ input::-moz-focus-inner {
 
 	p {
 		margin: 0 0 2em;
+		font-weight: 500;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2269,7 +2270,6 @@ input::-moz-focus-inner {
 	ul {
 		padding-left: 1em;
 		margin: 0 0 2em;
-		list-style: disc;
 	}
 
 		ul li {
@@ -2776,7 +2776,7 @@ input::-moz-focus-inner {
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.7em;
 		font-weight: 400;
-		letter-spacing: 0.25em;
+		letter-spacing: 0.15em;
 		line-height: 2.5;
 		text-transform: uppercase;
 	}
@@ -2899,7 +2899,7 @@ input::-moz-focus-inner {
 				font-size: 0.7em; 
 			}
 
-		#header .links {
+		#header nav {
 			overflow: hidden;
 			height: inherit;
 			flex: 1;
@@ -2908,25 +2908,26 @@ input::-moz-focus-inner {
 			line-height: inherit;
 		}
 
-			#header .links ul li {
+			#header nav ul li {
 				padding-left: 1em;
 				margin-left: 1em;
 				line-height: 1;
 			}
 
-				#header .links ul li:first-child {
+				#header nav ul li:first-child {
 					padding-left: 0;
 					border-left: 0;
 					margin-left: 0;
 				}
 
-				#header .links ul li a {
+				#header nav ul li a {
 					border-bottom: 0;
 					font-family: Raleway, Helvetica, sans-serif;
-					font-size: 0.7em;
-					font-weight: 400;
-					letter-spacing: 0.25em;
 					text-transform: uppercase;
+					font-weight: 800;
+					color: rgb(241, 230, 216);
+					font-size: .8rem;
+					letter-spacing: .2rem;
 				}
 
 		#header .main {
@@ -2999,7 +3000,7 @@ input::-moz-focus-inner {
 			}
 
 		@media screen and (width <= 980px) {
-			#header .links {
+			#header nav {
 				display: none;
 			}
 
@@ -3240,31 +3241,28 @@ input::-moz-focus-inner {
 			border-top: 0;
 		}
 
-		#menu .links {
-			padding: 0;
-			list-style: none;
-		}
-
-			#menu .links > li {
+			#menu nav > ul > li {
 				padding: 1.5em 0 0;
 				border: 0;
 				border-top: dotted 1px rgb(255 152 0 / 30%);
 				margin: 1.5em 0 0;
 			}
 
-				#menu .links > li a {
+				#menu nav > ul > li a {
 					display: block;
 					border-bottom: 0;
+					font-size: 0.7em;
+					-moz-transition: color 0.2s ease;
+					-webkit-transition: color 0.2s ease;
+					transition: color 0.2s ease;
+					text-transform: uppercase;
+					font-weight: 800;
+					color: rgb(241, 230, 216);
+					font-size: 1rem;
+					letter-spacing: .2rem;
 				}
 
-					#menu .links > li a h3 {
-						font-size: 0.7em;
-						-moz-transition: color 0.2s ease;
-						-webkit-transition: color 0.2s ease;
-						transition: color 0.2s ease;
-					}
-
-					#menu .links > li a p {
+					#menu nav > ul > li a p {
 						margin-bottom: 0;
 						font-family: Raleway, Helvetica, sans-serif;
 						font-size: 0.6em;
@@ -3274,11 +3272,11 @@ input::-moz-focus-inner {
 						text-transform: uppercase;
 					}
 
-					#menu .links > li a:hover h3 {
+					#menu nav > ul > li a:hover {
 						color: rgb(255 152 0);
 					}
 
-				#menu .links > li:first-child {
+				#menu nav > ul > li:first-child {
 					padding-top: 0;
 					border-top: 0;
 					margin-top: 0;

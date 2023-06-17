@@ -4,6 +4,7 @@ import Layout from '@layouts/Layout.astro';
 import Project from '@components/Project/Project.astro';
 import ContactForm from '@components/ContactForm.astro';
 import Pagination from '@components/Pagination/Pagination.astro';
+import Navigation from '@components/Navigation.astro';
 
 import projects from '@content/projects';
 
@@ -33,22 +34,7 @@ const { page }: Props = Astro.props;
 			<h1>
 				<a href="index.html">Jacob Asper</a>
 			</h1>
-			<nav class="links">
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="#aboutMe">About Me</a>
-					</li>
-					<li>
-						<a href="#projects">Projects</a>
-					</li>
-					<li>
-						<a href="#contactMe">Contact Me</a>
-					</li>
-				</ul>
-			</nav>
+			<Navigation />
 			<nav class="main">
 				<ul>
 					<li class="menu">
@@ -65,28 +51,7 @@ const { page }: Props = Astro.props;
 		<section id="menu">
 			<!-- Links -->
 			<section>
-				<ul class="links">
-					<li>
-						<a href="index.html">
-							<h3>Home</h3>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<h3>About Me</h3>
-						</a>
-					</li>
-					<li>
-						<a href="#projects">
-							<h3>Projects</h3>
-						</a>
-					</li>
-					<li>
-						<a href="#contactMe">
-							<h3>Contact Me</h3>
-						</a>
-					</li>
-				</ul>
+				<Navigation />
 			</section>
 		</section>
 		<!-- Main -->
