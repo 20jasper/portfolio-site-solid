@@ -1,4 +1,5 @@
 import fullStackInterviewQuestions from '@images/fullStackInterviewQuestions.mp4';
+import ticTacToe from '@images/ticTacToe.mp4';
 
 type Image = {
 	mediaType: 'image';
@@ -104,6 +105,19 @@ const projects: Project[] = [
 		},
 		techUsed: ['JavaScript', 'CSS', 'HTML'],
 		gitHubUrl: 'https://github.com/20jasper/covid-tracker',
+	},
+	{
+		projectName: 'Tic-Tac-Toe',
+		demoUrl: 'https://2-player-tic-tac-toe.netlify.app/',
+		description: 'A 2-player tic-tac-toe game with win and draw validation',
+		media: {
+			mediaType: 'video',
+			src: ticTacToe,
+			srcType: 'video/mp4',
+			altText: 'An animation of a tic tac toe game',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: 'https://github.com/20jasper/tic-tac-toe',
 	},
 ];
 
