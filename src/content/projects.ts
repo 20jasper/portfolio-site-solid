@@ -1,4 +1,7 @@
 import fullStackInterviewQuestions from '@images/fullStackInterviewQuestions.mp4';
+import ticTacToe from '@images/ticTacToe.mp4';
+import theMidnightDuck from '@images/theMidnightDuck.jpg';
+import ronaldosBurgers from '@images/ronaldosBurgers.jpg';
 
 type Image = {
 	mediaType: 'image';
@@ -14,7 +17,8 @@ type Video = {
 
 export type Project = {
 	demoUrl: string;
-	gitHubUrl: string;
+	/** string if url exists, null otherwise */
+	gitHubUrl: string | null;
 	projectName: string;
 	description: string;
 	media: Image | Video;
@@ -91,6 +95,72 @@ const projects: Project[] = [
 		},
 		techUsed: ['JavaScript', 'CSS', 'HTML', 'Node'],
 		gitHubUrl: 'https://github.com/20jasper/interview-question-api',
+	},
+	{
+		projectName: 'COVID–19 Tracker',
+		demoUrl: 'https://coronavirusworlddata.netlify.app/',
+		description:
+			'See the current world and total world COVID deaths and cases in real time',
+		media: {
+			mediaType: 'image',
+			src: 'https://raw.githubusercontent.com/20jasper/covid-tracker/main/CovidTracker.jpg',
+			altText: 'a site tracking COVID-19 statistics',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: 'https://github.com/20jasper/covid-tracker',
+	},
+	{
+		projectName: 'Tic-Tac-Toe',
+		demoUrl: 'https://2-player-tic-tac-toe.netlify.app/',
+		description: 'A 2-player tic-tac-toe game with win and draw validation',
+		media: {
+			mediaType: 'video',
+			src: ticTacToe,
+			srcType: 'video/mp4',
+			altText: 'An animation of a tic tac toe game',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: 'https://github.com/20jasper/tic-tac-toe',
+	},
+	{
+		projectName: 'SVG faces',
+		demoUrl: 'https://svg-faces.netlify.app/',
+		description:
+			'Modular faces built with SVG, HTML, CSS, JavaScript, React, and D3.js',
+		media: {
+			mediaType: 'image',
+			src: 'https://raw.githubusercontent.com/20jasper/SVG-faces/main/SVG-faces.webp',
+			altText:
+				'a site with a a yellow happy face, a blue sad face, and a red mad face',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML', 'React', 'D3'],
+		gitHubUrl: 'https://github.com/20jasper/SVG-faces',
+	},
+	{
+		projectName: 'The Midnight Duck',
+		demoUrl: 'https://themidnightduck.netlify.app/',
+		description: 'A site for a late-night bar and grill',
+		media: {
+			mediaType: 'image',
+			src: theMidnightDuck,
+			altText:
+				'The Midnight Duck site. A food and drink menu section is visible below the title',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: null,
+	},
+	{
+		projectName: "Ronaldo's Burgers",
+		demoUrl: 'https://ronaldosburgers.netlify.app/',
+		description: 'A site for an elegant burger restaurant',
+		media: {
+			mediaType: 'image',
+			src: ronaldosBurgers,
+			altText:
+				"A landing page for Ronaldo's Burgers. An image of cheeseburger on a cutting board is to the right of the slogan",
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: null,
 	},
 ];
 

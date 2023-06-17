@@ -1,0 +1,38 @@
+---
+import type { Project } from '@content/projects';
+
+type Props = Pick<Project, 'demoUrl' | 'gitHubUrl'>;
+
+const { demoUrl, gitHubUrl } = Astro.props;
+
+type ProjectLink = {
+	url: string | null;
+	text: string;
+};
+const projectLinks: ProjectLink[] = [
+	{ url: demoUrl, text: 'Live Demo' },
+	{ url: gitHubUrl, text: 'GitHub Repo' },
+];
+---
+
+<ul class="actions">
+	{
+		projectLinks.map(({ url, text }) => {
+			if (url === null) {
+				return null;
+			}
+			return (
+				<li>
+					<a
+						href={url}
+						class="button large"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{text}
+					</a>
+				</li>
+			);
+		})
+	}
+</ul>

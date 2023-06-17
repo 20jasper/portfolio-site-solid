@@ -1,0 +1,46 @@
+---
+import ProjectLinks from './ProjectLinks.astro';
+
+import type { Project } from '@content/projects';
+import ProjectMedia from './ProjectMedia.astro';
+
+type Props = Project;
+
+const { projectName, demoUrl, gitHubUrl, description, media, techUsed } =
+	Astro.props;
+
+const formatter = new Intl.ListFormat('en', {
+	style: 'long',
+	type: 'conjunction',
+});
+---
+
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>
+				<a
+					href={demoUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{projectName}
+				</a>
+			</h2>
+			<p>{description}</p>
+		</div>
+	</header>
+	<ProjectMedia
+		{demoUrl}
+		{media}
+	/>
+	<p>
+		Tech Used: {formatter.format(techUsed)}
+	</p>
+	<footer>
+		<ProjectLinks
+			{demoUrl}
+			{gitHubUrl}
+		/>
+	</footer>
+</article>
