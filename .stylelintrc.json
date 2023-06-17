@@ -29,6 +29,7 @@
 		"plugin/use-logical-units": [
 			true,
 			{ "severity": "warning", "disable-auto-fix": true }
-		]
+		],
+		"media-feature-range-notation": "prefix"
 	}
 }
