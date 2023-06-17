@@ -2547,7 +2547,7 @@ input::-moz-focus-inner {
 			.post > header .title {
 				flex: 1;
 				flex-grow: 1;
-				padding: 3.75em 3em 3.3em;
+				padding: 3.75em 3em 0;
 			}
 
 				.post > header .title h2 {
