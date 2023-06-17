@@ -1,14 +1,15 @@
 ---
 import Layout from '@layouts/Layout.astro';
+
 import Project from '@components/Project.astro';
 import ContactForm from '@components/ContactForm.astro';
 import Pagination from '@components/Pagination.astro';
 
-import projects from '@pages/projects/projects';
+import projects from '@content/projects';
 
 import orangeHtml from '@images/orangehtml.webp';
 
-import type { Project as ProjectProps } from './projects';
+import type { Project as ProjectProps } from '@content/projects';
 import type { GetStaticPathsResult, GetStaticPathsOptions, Page } from 'astro';
 
 type Props = {

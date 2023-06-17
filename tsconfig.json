@@ -23,8 +23,8 @@
 			"@pages/*": [
 				"src/pages/*"
 			],
-			"@scripts/*": [
-				"src/scripts/*"
+			"@content/*": [
+				"src/content/*"
 			],
 			"@images/*": [
 				"src/images/*"
