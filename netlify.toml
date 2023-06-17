@@ -8,3 +8,9 @@ minify = true
 [build.processing.js]
 bundle = true
 minify = true
+
+[[redirects]]
+from = "/"
+to = "/projects/1"
+status = 301
+force = true
