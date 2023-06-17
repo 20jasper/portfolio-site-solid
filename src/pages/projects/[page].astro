@@ -1,10 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Project from '../../components/Project.astro';
-import ContactForm from '../../components/ContactForm.astro';
-import Pagination from '../../components/Pagination.astro';
+import Layout from '@layouts/Layout.astro';
+import Project from '@components/Project.astro';
+import ContactForm from '@components/ContactForm.astro';
+import Pagination from '@components/Pagination.astro';
 
-import projects from './projects';
+import projects from '@pages/projects/projects';
+
+import orangeHtml from '@images/orangehtml.webp';
 
 import type { Project as ProjectProps } from './projects';
 import type { GetStaticPathsResult, GetStaticPathsOptions, Page } from 'astro';
@@ -120,7 +122,7 @@ const { page }: Props = Astro.props;
 			<section id="intro">
 				<img
 					class="logo"
-					src="images/orangehtml.webp"
+					src={orangeHtml}
 					alt="HTML closing tag"
 				/>
 				<header>
