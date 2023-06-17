@@ -1,0 +1,10 @@
+[build]
+command = "pnpm run build"
+publish = "dist"
+
+[build.processing.css]
+bundle = true
+minify = true
+[build.processing.js]
+bundle = true
+minify = true
