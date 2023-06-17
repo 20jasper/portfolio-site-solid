@@ -1,4 +1,6 @@
 ---
+import ProjectLinks from './ProjectLinks.astro';
+
 import type { Project } from '@content/projects';
 
 type Props = Project;
@@ -59,30 +61,9 @@ const formatter = new Intl.ListFormat('en', {
 		Tech Used: {formatter.format(techUsed)}
 	</p>
 	<footer>
-		<ul class="actions">
-			<li>
-				<a
-					href={demoUrl}
-					class="button large"
-					target="_blank"
-					rel="noopener noreferrer"
-					>Live Demo</a
-				>
-			</li>
-			{
-				gitHubUrl !== null ? (
-					<li>
-						<a
-							href={gitHubUrl}
-							class="button large"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Github Repo
-						</a>
-					</li>
-				) : null
-			}
-		</ul>
+		<ProjectLinks
+			{demoUrl}
+			{gitHubUrl}
+		/>
 	</footer>
 </article>
