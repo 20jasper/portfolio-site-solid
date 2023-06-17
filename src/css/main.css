@@ -2846,12 +2846,12 @@ input::-moz-focus-inner {
 
 				#header nav ul li a {
 					border-bottom: 0;
+					color: rgb(241 230 216);
 					font-family: Raleway, Helvetica, sans-serif;
-					text-transform: uppercase;
-					font-weight: 800;
-					color: rgb(241, 230, 216);
 					font-size: .8rem;
+					font-weight: 800;
 					letter-spacing: .2rem;
+					text-transform: uppercase;
 				}
 
 		#header .main {
@@ -3175,15 +3175,15 @@ input::-moz-focus-inner {
 				#menu nav > ul > li a {
 					display: block;
 					border-bottom: 0;
+					color: rgb(241 230 216);
 					font-size: 0.7em;
+					font-size: 1rem;
+					font-weight: 800;
+					letter-spacing: .2rem;
+					text-transform: uppercase;
 					-moz-transition: color 0.2s ease;
 					-webkit-transition: color 0.2s ease;
 					transition: color 0.2s ease;
-					text-transform: uppercase;
-					font-weight: 800;
-					color: rgb(241, 230, 216);
-					font-size: 1rem;
-					letter-spacing: .2rem;
 				}
 
 					#menu nav > ul > li a p {
