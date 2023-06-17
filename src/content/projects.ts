@@ -92,6 +92,19 @@ const projects: Project[] = [
 		techUsed: ['JavaScript', 'CSS', 'HTML', 'Node'],
 		gitHubUrl: 'https://github.com/20jasper/interview-question-api',
 	},
+	{
+		projectName: 'COVID–19 Tracker',
+		demoUrl: 'https://coronavirusworlddata.netlify.app/',
+		description:
+			'See the current world and total world COVID deaths and cases in real time',
+		media: {
+			mediaType: 'image',
+			src: 'https://raw.githubusercontent.com/20jasper/covid-tracker/main/CovidTracker.jpg',
+			altText: 'a site tracking COVID-19 statistics',
+		},
+		techUsed: ['JavaScript', 'CSS', 'HTML'],
+		gitHubUrl: 'https://github.com/20jasper/covid-tracker',
+	},
 ];
 
 export default projects;
