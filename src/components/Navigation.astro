@@ -1,0 +1,36 @@
+---
+type Link = {
+	href: string;
+	text: string;
+};
+const links: Link[] = [
+	{
+		text: 'home',
+		href: '/',
+	},
+	{
+		text: 'about me',
+		href: '#aboutMe',
+	},
+	{
+		text: 'projects',
+		href: '#projects',
+	},
+	{
+		text: 'contact me',
+		href: '#contactMe',
+	},
+];
+---
+
+<nav>
+	<ul>
+		{
+			links.map(({ text, href }) => (
+				<li>
+					<a {href}>{text}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
