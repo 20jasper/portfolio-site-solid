@@ -1,4 +1,4 @@
-import fullStackInterviewQuestions from '../../../public/images/fullStackInterviewQuestions.mp4';
+import fullStackInterviewQuestions from '@images/fullStackInterviewQuestions.mp4';
 
 type Image = {
 	mediaType: 'image';

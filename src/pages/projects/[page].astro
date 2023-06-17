@@ -1,12 +1,15 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Project from '../../components/Project.astro';
-import ContactForm from '../../components/ContactForm.astro';
-import Pagination from '../../components/Pagination.astro';
+import Layout from '@layouts/Layout.astro';
 
-import projects from './projects';
+import Project from '@components/Project.astro';
+import ContactForm from '@components/ContactForm.astro';
+import Pagination from '@components/Pagination.astro';
 
-import type { Project as ProjectProps } from './projects';
+import projects from '@content/projects';
+
+import orangeHtml from '@images/orangehtml.webp';
+
+import type { Project as ProjectProps } from '@content/projects';
 import type { GetStaticPathsResult, GetStaticPathsOptions, Page } from 'astro';
 
 type Props = {
@@ -19,11 +22,9 @@ export function getStaticPaths({
 	return paginate(projects, { pageSize: 3 });
 }
 
-// Paginated data is in the `page` prop
 const { page }: Props = Astro.props;
 ---
 
-<!--Display the current page number. Astro.params.page can also be used!--><!-- <h1>Page {page.currentPage}</h1> -->
 <Layout title="Jacob Asper">
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -122,7 +123,7 @@ const { page }: Props = Astro.props;
 			<section id="intro">
 				<img
 					class="logo"
-					src="images/orangehtml.webp"
+					src={orangeHtml}
 					alt="HTML closing tag"
 				/>
 				<header>
@@ -196,25 +197,4 @@ const { page }: Props = Astro.props;
 			</section>
 		</section>
 	</div>
-	<!-- Scripts -->
-	<script
-		is:inline
-		src="assets/js/jquery.min.js"
-	></script>
-	<script
-		is:inline
-		src="assets/js/browser.min.js"
-	></script>
-	<script
-		is:inline
-		src="assets/js/breakpoints.min.js"
-	></script>
-	<script
-		is:inline
-		src="assets/js/util.js"
-	></script>
-	<script
-		is:inline
-		src="assets/js/main.js"
-	></script>
 </Layout>

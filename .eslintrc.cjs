@@ -19,6 +19,7 @@ module.exports = {
 	rules: {
 		'@typescript-eslint/explicit-function-return-type': 'warn',
 		'@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+		'@typescript-eslint/triple-slash-reference': 'off',
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {

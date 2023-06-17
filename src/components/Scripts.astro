@@ -1,0 +1,20 @@
+---
+const BASE_PATH = '../scripts';
+
+const scriptFiles: string[] = [
+	'jquery.min.cjs',
+	'browser.min.cjs',
+	'breakpoints.min.cjs',
+	'util.cjs',
+	'main.cjs',
+];
+---
+
+{
+	scriptFiles.map((fileName) => (
+		<script
+			defer
+			src={`${BASE_PATH}/${fileName}`}
+		/>
+	))
+}

@@ -9,6 +9,15 @@
 		"esModuleInterop": true,
 		"jsx": "preserve",
 		"jsxImportSource": "solid-js",
+		"baseUrl": ".",
+		"paths": {
+			"@components/*": ["src/components/*"],
+			"@css/*": ["src/css/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@pages/*": ["src/pages/*"],
+			"@content/*": ["src/content/*"],
+			"@images/*": ["src/images/*"]
+		},
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
