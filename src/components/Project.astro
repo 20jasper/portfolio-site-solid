@@ -69,15 +69,20 @@ const formatter = new Intl.ListFormat('en', {
 					>Live Demo</a
 				>
 			</li>
-			<li>
-				<a
-					href={gitHubUrl}
-					class="button large"
-					target="_blank"
-					rel="noopener noreferrer"
-					>Github Repo</a
-				>
-			</li>
+			{
+				gitHubUrl !== null ? (
+					<li>
+						<a
+							href={gitHubUrl}
+							class="button large"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Github Repo
+						</a>
+					</li>
+				) : null
+			}
 		</ul>
 	</footer>
 </article>
