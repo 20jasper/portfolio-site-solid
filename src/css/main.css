@@ -64,7 +64,7 @@ input::-moz-focus-inner {
 		width: device-width;
 	}
 
-	@media screen and (width <= 480px) {
+	@media screen and (max-width: 480px) {
 		html, body {
 			min-width: 20rem;
 		}
@@ -101,42 +101,6 @@ input::-moz-focus-inner {
 		font-weight: 400;
 		line-height: 1.75;
 	}
-
-		@media screen and (width <= 1680px) {
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-		}
-
-		@media screen and (width <= 1280px) {
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-		}
-
-		@media screen and (width <= 980px) {
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-		}
-
-		@media screen and (width <= 736px) {
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-		}
-
-		@media screen and (width <= 480px) {
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-			
-
-		}
 
 	a {
 		border-bottom: dotted 1px rgb(255 152 0 / 65%);
@@ -519,7 +483,7 @@ input::-moz-focus-inner {
 					padding-top: 2em;
 				}
 
-		@media screen and (width <= 1680px) {
+		@media screen and (max-width: 1680px) {
 			.row {
 				display: flex;
 				box-sizing: border-box;
@@ -763,7 +727,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 1280px) {
+		@media screen and (max-width: 1280px) {
 			.row {
 				display: flex;
 				box-sizing: border-box;
@@ -1007,7 +971,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 980px) {
+		@media screen and (max-width: 980px) {
 			.row {
 				display: flex;
 				box-sizing: border-box;
@@ -1251,7 +1215,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 736px) {
+		@media screen and (max-width: 736px) {
 			.row {
 				display: flex;
 				box-sizing: border-box;
@@ -1495,7 +1459,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 480px) {
+		@media screen and (max-width: 480px) {
 			.row {
 				display: flex;
 				box-sizing: border-box;
@@ -2237,7 +2201,7 @@ input::-moz-focus-inner {
 				width: 100%;
 			}
 
-			@media screen and (width <= 736px) {
+			@media screen and (max-width: 736px) {
 				.image.featured {
 					margin: 0 0 1.5em;
 				}
@@ -2319,7 +2283,7 @@ input::-moz-focus-inner {
 			vertical-align: middle;
 		}
 
-		@media screen and (width <= 480px) {
+		@media screen and (max-width: 480px) {
 			ul.actions:not(.fixed) {
 				flex-direction: column;
 				inline-size: 100% !important;
@@ -2489,7 +2453,7 @@ input::-moz-focus-inner {
 		margin: 0 0 2em;
 	}
 
-		@media screen and (width <= 1280px) {
+		@media screen and (max-width: 1280px) {
 			.mini-posts {
 				display: flex;
 				width: calc(100% + 2em);
@@ -2507,7 +2471,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 480px) {
+		@media screen and (max-width: 480px) {
 			.mini-posts {
 				display: block;
 				width: 100%;
@@ -2646,7 +2610,7 @@ input::-moz-focus-inner {
 							color: rgb(255 152 0 / 30%);
 						}
 
-		@media screen and (width <= 980px) {
+		@media screen and (max-width: 980px) {
 			.post {
 				left: -2em;
 				width: calc(100% + (.5em * 2));
@@ -2711,7 +2675,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 736px) {
+		@media screen and (max-width: 736px) {
 				.post > header {
 					left: -1.5em;
 					width: calc(100% + 3em);
@@ -2725,7 +2689,7 @@ input::-moz-focus-inner {
 
 		}
 
-		@media screen and (width <= 480px) {
+		@media screen and (max-width: 480px) {
 			.post > header .meta {
 				flex-direction: column;
 				align-items: center;
@@ -2923,14 +2887,14 @@ input::-moz-focus-inner {
 				vertical-align: middle;
 			}
 
-		@media screen and (width <= 980px) {
+		@media screen and (max-width: 980px) {
 			#header nav {
 				display: none;
 			}
 
 		}
 
-		@media screen and (width <= 736px) {
+		@media screen and (max-width: 736px) {
 			#header {
 				height: 2.75em;
 				line-height: 2.75em;
@@ -2965,21 +2929,21 @@ input::-moz-focus-inner {
 			opacity: 0.15;
 		}
 
-		@media screen and (width <= 1680px) {
+		@media screen and (max-width: 1680px) {
 			#wrapper {
 				padding: 3em;
 			}
 
 		}
 
-		@media screen and (width <= 1280px) {
+		@media screen and (max-width: 1280px) {
 			#wrapper {
 				display: block;
 			}
 
 		}
 
-		@media screen and (width <= 736px) {
+		@media screen and (max-width: 736px) {
 			#wrapper {
 				padding: 2em;
 			}
@@ -3018,7 +2982,7 @@ input::-moz-focus-inner {
 			margin-top: 0;
 		}
 
-		@media screen and (width <= 1280px) {
+		@media screen and (max-width: 1280px) {
 			#sidebar {
 				width: 100%;
 				min-width: 0;
@@ -3074,7 +3038,7 @@ input::-moz-focus-inner {
 		color: rgb(154 155 161);
 	}
 
-	@media screen and (width <= 1280px) {
+	@media screen and (max-width: 1280px) {
 		#intro {
 			margin: 0 0 3em;
 			text-align: center;
@@ -3090,7 +3054,7 @@ input::-moz-focus-inner {
 
 	}
 
-	@media screen and (width <= 736px) {
+	@media screen and (max-width: 736px) {
 		#intro {
 			padding: 1.25em 0;
 			margin: 0 0 1.5em;
@@ -3211,7 +3175,7 @@ input::-moz-focus-inner {
 			visibility: visible;
 		}
 
-		@media screen and (width <= 736px) {
+		@media screen and (max-width: 736px) {
 			#menu > * {
 				padding: 1.5em;
 			}
@@ -3230,7 +3194,7 @@ input::-moz-focus-inner {
 			top: -4em;
 		}
 	
-	@media screen and (width <= 1280px) {
+	@media screen and (max-width: 1280px) {
 			span.navigation#projects{
 				top: 12em;
 			}
