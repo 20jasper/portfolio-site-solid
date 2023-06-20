@@ -61,8 +61,8 @@ devDependencies:
     specifier: ^33.0.0
     version: 33.0.0(stylelint@15.6.2)
   stylelint-csstree-validator:
-    specifier: ^2.1.0
-    version: 2.1.0(stylelint@15.6.2)
+    specifier: ^3.0.0
+    version: 3.0.0(stylelint@15.6.2)
   stylelint-no-unsupported-browser-features:
     specifier: ^6.1.0
     version: 6.1.0(stylelint@15.6.2)
@@ -5315,11 +5315,11 @@ packages:
       stylelint-config-recommended: 12.0.0(stylelint@15.6.2)
     dev: true
 
-  /stylelint-csstree-validator@2.1.0(stylelint@15.6.2):
-    resolution: {integrity: sha512-FKUMEz/iicwkOsY+ohstjlD9dj3qFdAVcw/oVwBDJwToUpwAh/GkvV5FXUd60DoAzn19s1TPsvUuGPbzDo0ZMw==}
-    engines: {node: ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+  /stylelint-csstree-validator@3.0.0(stylelint@15.6.2):
+    resolution: {integrity: sha512-/CPYhwchWZbyZK2LVGKvt1ivISYZyRSRhrY4cMArlwYh1DxwygubR0nBv+5upuX23j1qBfJWdv6xx9dsUZF+OA==}
+    engines: {node: ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
     peerDependencies:
-      stylelint: '>=7.0.0 <15.0.0'
+      stylelint: '>=7.0.0 <16.0.0'
     dependencies:
       css-tree: 2.3.1
       stylelint: 15.6.2
