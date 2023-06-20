@@ -1,11 +1,14 @@
 ---
-// Immediately redirect to this page
-Astro.redirect('/pages/1');
+const REDIRECT_URL = '/projects/1';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<head lang="en">
 	<head>
+		<script define:vars={{ REDIRECT_URL }}>
+			// Immediately redirect
+			window.location = REDIRECT_URL;
+		</script>
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
@@ -13,5 +16,12 @@ Astro.redirect('/pages/1');
 		/>
 		<title>Loading</title>
 	</head>
-	<body> </body>
-</html>
+
+	<body>
+		<h1>
+			<a href={REDIRECT_URL}>
+				Please click here if you aren't redirected to the main site
+			</a>
+		</h1>
+	</body>
+</head>
