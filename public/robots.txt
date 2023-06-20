@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jacobasper.com/sitemap-index.xml
