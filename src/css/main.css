@@ -119,12 +119,21 @@ input::-moz-focus-inner {
 			color: var(--accent-text-color) !important; 
 		}
 
-
 			a:hover::before,
 			#copy:hover{
 				color: var(--accent-text-color) !important;
 			}
 
+		a svg {
+			fill: var(--primary-text-color) !important; 
+		}
+
+			a:hover svg {
+				fill: var(--accent-text-color) !important; 
+				-moz-transition: fill 0.2s ease;
+				-webkit-transition: fill 0.2s ease;
+				transition: fill 0.2s ease;
+			}
 
 	strong, b {
 		color: var(--primary-text-color);
@@ -1330,21 +1339,39 @@ input::-moz-focus-inner {
 			padding-left: 1.5em;
 			margin-left: 1.5em;
 			line-height: inherit;
+			display: flex;
+			align-items: center;
 		}
 
-			#header nav ul li {
+			#header nav ul {
+				inline-size: 100%;
+				display: flex;
+				align-items: center;
+			}
+
+			#header nav li {
 				padding-left: 1em;
 				margin-left: 1em;
 				line-height: 1;
+				display: flex;
+				align-items: center;
 			}
 
-				#header nav ul li:first-child {
+				#header nav li:first-child {
 					padding-left: 0;
 					border-left: 0;
 					margin-left: 0;
 				}
 
-				#header nav ul li a {
+				#header nav li:last-child {
+					margin-left: auto;
+					margin-right: 2rem;
+					
+					/* default hidden until shown by a media query */
+					display: none;
+				}
+
+				#header nav li a {
 					border-bottom: 0;
 					color: var(--primary-text-color);
 					font-family: Raleway, Helvetica, sans-serif;
@@ -1423,9 +1450,14 @@ input::-moz-focus-inner {
 				vertical-align: middle;
 			}
 
-		@media screen and (max-width: 980px) {
-			#header nav {
+		/* hide nav items on smaller screen sizes  */
+		@media screen and (max-width: 800px) {
+			#header nav li {
 				display: none;
+			}
+
+			#header nav li:last-child {
+				display: flex;
 			}
 		}
 
@@ -1726,4 +1758,12 @@ input::-moz-focus-inner {
 /* video */
 video{
 	max-width: 100%;
+}
+
+/* font awesome */
+.font-awesome {
+	height: 1.5rem;
+	vertical-align: -.45rem;
+	fill: var(--primary-text-color);
+	/* margin: auto 0; */
 }
