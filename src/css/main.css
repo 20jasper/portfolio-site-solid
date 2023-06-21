@@ -7,6 +7,11 @@
 	License: pixelarity.com/license
 */
 
+:root {
+	--primary-text-color: rgb(241 230 216);
+	--accent-text-color: rgb(255 152 0);
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -111,17 +116,18 @@ input::-moz-focus-inner {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: rgb(255 152 0) !important; 
+			color: var(--accent-text-color) !important; 
 		}
 
+
 			a:hover::before,
-			#copy:hover
-		{
-				color: rgb(255 152 0) !important;
+			#copy:hover{
+				color: var(--accent-text-color) !important;
 			}
 
+
 	strong, b {
-		color: rgb(241 230 216);
+		color: var(--primary-text-color);
 		font-weight: 700;
 	}
 
@@ -136,7 +142,7 @@ input::-moz-focus-inner {
 
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0 0 1em;
-		color: rgb(241 230 216);
+		color: var(--primary-text-color);
 		font-family: Raleway, Helvetica, sans-serif;
 		font-weight: 800;
 		letter-spacing: 0.25em;
@@ -316,7 +322,7 @@ input::-moz-focus-inner {
 		border: 0;
 		background-color: transparent;
 		box-shadow: inset 0 0 0 0.125rem rgb(255 152 0 / 20%);
-		color: rgb(241 230 216) !important;
+		color: var(--primary-text-color) !important;
 		cursor: pointer;
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.6em;
@@ -338,8 +344,8 @@ input::-moz-focus-inner {
 		button:hover,
 		.button:hover
 		{
-			box-shadow: inset 0 0 0 1px rgb(255 152 0);
-			color: rgb(255 152 0) !important;
+			box-shadow: inset 0 0 0 1px var(--accent-text-color);
+			color: var(--accent-text-color) !important;
 		}
 
 			input[type="submit"]:hover:active,
@@ -447,7 +453,7 @@ input::-moz-focus-inner {
 	label {
 		display: block;
 		margin: 0 0 1em;
-		color: rgb(241 230 216);
+		color: var(--primary-text-color);
 		font-size: 0.9em;
 		font-weight: 700;
 	}
@@ -616,16 +622,16 @@ input::-moz-focus-inner {
 
 		input[type="checkbox"]:checked + label::before,
 		input[type="radio"]:checked + label::before {
-			border-color: rgb(241 230 216);
-			background: rgb(241 230 216);
+			border-color: var(--primary-text-color);
+			background: var(--primary-text-color);
 			color: rgb(20 19 33);
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label::before,
 		input[type="radio"]:focus + label::before {
-			border-color: rgb(255 152 0);
-			box-shadow: 0 0 0 1px rgb(255 152 0);
+			border-color: var(--accent-text-color);
+			box-shadow: 0 0 0 1px var(--accent-text-color);
 		}
 
 	input[type="radio"] + label::before {
@@ -1067,7 +1073,7 @@ input::-moz-focus-inner {
 				.post > header .meta .published {
 					display: block;
 					margin-top: 0.5em;
-					color: rgb(241 230 216);
+					color: var(--primary-text-color);
 					font-family: Raleway, Helvetica, sans-serif;
 					font-size: 0.7em;
 					font-weight: 800;
@@ -1340,7 +1346,7 @@ input::-moz-focus-inner {
 
 				#header nav ul li a {
 					border-bottom: 0;
-					color: rgb(241 230 216);
+					color: var(--primary-text-color);
 					font-family: Raleway, Helvetica, sans-serif;
 					font-size: .8rem;
 					font-weight: 800;
@@ -1375,7 +1381,7 @@ input::-moz-focus-inner {
 						overflow: hidden;
 						width: 4em;
 						border-bottom: 0;
-						color: rgb(241 230 216);
+						color: var(--primary-text-color);
 						text-decoration: none;
 						text-indent: 4em;
 					}
@@ -1655,7 +1661,7 @@ input::-moz-focus-inner {
 				#menu nav > ul > li a {
 					display: block;
 					border-bottom: 0;
-					color: rgb(241 230 216);
+					color: var(--primary-text-color);
 					font-size: 0.7em;
 					font-size: 1rem;
 					font-weight: 800;
@@ -1677,7 +1683,7 @@ input::-moz-focus-inner {
 					}
 
 					#menu nav > ul > li a:hover {
-						color: rgb(255 152 0);
+						color: var(--accent-text-color);
 					}
 
 				#menu nav > ul > li:first-child {
