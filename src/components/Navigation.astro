@@ -25,6 +25,7 @@ const links: Link[] = [
 
 <nav>
 	<ul>
+		<slot name="list-start" />
 		{
 			links.map(({ text, href }) => (
 				<li>
@@ -32,5 +33,6 @@ const links: Link[] = [
 				</li>
 			))
 		}
+		<slot name="list-end" />
 	</ul>
 </nav>
