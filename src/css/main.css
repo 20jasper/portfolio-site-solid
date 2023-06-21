@@ -1421,7 +1421,6 @@ input::-moz-focus-inner {
 			#header nav {
 				display: none;
 			}
-
 		}
 
 		@media screen and (max-width: 736px) {
@@ -1433,11 +1432,6 @@ input::-moz-focus-inner {
 				#header h1 {
 					padding: 0 0 0 1em;
 				}
-
-				#header .main .search {
-					display: none;
-				}
-
 		}
 
 /* Wrapper */
@@ -1483,14 +1477,6 @@ input::-moz-focus-inner {
 		body.single #wrapper {
 			display: block;
 		}
-
-/* Main */
-
-	#main {
-		width: 100%;
-		flex: 1;
-		flex-grow: 1;
-	}
 
 /* Sidebar */
 

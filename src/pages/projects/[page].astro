@@ -56,11 +56,11 @@ const { page }: Props = Astro.props;
 			class="navigation"
 			id="projects"
 		></span>
-		<div id="main">
+		<main>
 			{page.data.map((project) => <Project {...project} />)}
 
 			<Pagination {page} />
-		</div>
+		</main>
 		<!-- Sidebar -->
 		<section id="sidebar">
 			<!-- Intro -->
