@@ -86,7 +86,7 @@ input::-moz-focus-inner {
 
 	body {
 		background: rgb(2 0 19);
-		line-height: 1;
+		line-height: 2;
 		-ms-overflow-style: scrollbar; 
 	}
 
@@ -1478,7 +1478,6 @@ input::-moz-focus-inner {
 		display: flex;
 		width: 90em;
 		max-width: 100%;
-		flex-direction: row-reverse;
 		padding: 4.5em;
 		margin: 0 auto;
 		opacity: 1;
@@ -1518,26 +1517,26 @@ input::-moz-focus-inner {
 
 /* Sidebar */
 
-	#sidebar {
+	aside {
 		width: 22em;
 		min-width: 22em;
 		margin-right: 3em;
 	}
 
-		#sidebar > * {
+		aside > * {
 			padding: 3em 0 0;
 			border-top: solid 1px rgb(255 152 0 / 30%);
 			margin: 3em 0 0;
 		}
 
-		#sidebar > :first-child {
+		aside > :first-child {
 			padding-top: 0;
 			border-top: 0;
 			margin-top: 0;
 		}
 
 		@media screen and (max-width: 1280px) {
-			#sidebar {
+			aside {
 				width: 100%;
 				min-width: 0;
 				padding: 3em 0 0;

@@ -43,22 +43,8 @@ const { page }: Props = Astro.props;
 				</li>
 			</Navigation>
 		</header>
-		<!-- Menu -->
-		<section id="menu">
-			<Navigation />
-		</section>
-		<!-- Main -->
-		<span
-			class="navigation"
-			id="projects"
-		></span>
-		<main>
-			{page.data.map((project) => <Project {...project} />)}
-
-			<Pagination {page} />
-		</main>
 		<!-- Sidebar -->
-		<section id="sidebar">
+		<aside>
 			<!-- Intro -->
 			<section id="intro">
 				<img
@@ -135,6 +121,20 @@ const { page }: Props = Astro.props;
 					>
 				</p>
 			</section>
+		</aside>
+		<!-- Menu -->
+		<section id="menu">
+			<Navigation />
 		</section>
+		<!-- Main -->
+		<span
+			class="navigation"
+			id="projects"
+		></span>
+		<main>
+			{page.data.map((project) => <Project {...project} />)}
+
+			<Pagination {page} />
+		</main>
 	</div>
 </Layout>
