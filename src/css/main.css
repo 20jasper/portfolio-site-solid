@@ -1633,7 +1633,7 @@ input::-moz-focus-inner {
 
 /* Footer */
 
-	#footer .copyright {
+	footer .copyright {
 		color: rgb(224 225 252);
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.5em;
@@ -1642,7 +1642,7 @@ input::-moz-focus-inner {
 		text-transform: uppercase;
 	}
 
-	body.single #footer {
+	body.single footer {
 		text-align: center;
 	}
 
