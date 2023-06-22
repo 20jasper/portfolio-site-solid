@@ -742,16 +742,6 @@ input::-moz-focus-inner {
 
 			}
 
-		.image.main {
-			display: block;
-			width: 100%;
-			margin: 0 0 3em;
-		}
-
-			.image.main img, .image.main video {
-				width: 100%;
-			}
-
 /* List */
 
 	ol {
@@ -1065,63 +1055,6 @@ input::-moz-focus-inner {
 					letter-spacing: .2rem;
 					text-transform: uppercase;
 				}
-
-		#header .main {
-			height: inherit;
-			line-height: inherit;
-			text-align: right;
-		}
-
-			#header .main ul {
-				height: inherit;
-				line-height: inherit;
-			}
-
-				#header .main li {
-					height: inherit;
-					line-height: inherit;
-					white-space: nowrap;
-				}
-
-					#header .main li > * {
-						display: block;
-						float: left;
-					}
-
-					#header .main li > a {
-						position: relative;
-						overflow: hidden;
-						width: 4em;
-						border-bottom: 0;
-						color: var(--primary-text-color);
-						text-decoration: none;
-						text-indent: 4em;
-					}
-
-						#header .main li > a::before {
-							display: inline-block;
-							font-family: 'Font Awesome 5 Free';
-							-moz-osx-font-smoothing: grayscale;
-							-webkit-font-smoothing: antialiased;
-							font-style: normal;
-							font-variant: normal;
-							font-weight: 900;
-							line-height: 1;
-							text-rendering: auto;
-							text-transform: none !important;
-						}
-
-						#header .main li > a::before {
-							position: absolute;
-							top: 0;
-							left: 0;
-							display: block;
-							width: inherit;
-							height: inherit;
-							line-height: inherit;
-							text-align: center;
-							text-indent: 0;
-						}
 
 		#header form {
 			margin: 0;
