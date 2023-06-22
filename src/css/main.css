@@ -1538,13 +1538,9 @@ input::-moz-focus-inner {
 		@media screen and (max-width: 1280px) {
 			aside {
 				width: 100%;
-				min-width: 0;
-				padding: 3em 0 0;
-				border-top: solid 1px rgb(255 152 0 / 30%);
-				margin: 3em 0 0;
 				overflow-x: hidden;
+				min-width: 0;
 			}
-
 		}
 
 /* Intro */
