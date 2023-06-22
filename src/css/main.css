@@ -769,24 +769,9 @@ input::-moz-focus-inner {
 		margin: 0 0 2em;
 	}
 
-		ul li {
+		li {
 			padding-left: 0.5em;
 		}
-
-		ul.alt {
-			padding-left: 0;
-			list-style: none;
-		}
-
-			ul.alt li {
-				padding: 0.5em 0;
-				border-top: solid 1px rgb(255 152 0 / 30%);
-			}
-
-				ul.alt li:first-child {
-					padding-top: 0;
-					border-top: 0;
-				}
 
 	dl {
 		margin: 0 0 2em;
@@ -804,7 +789,7 @@ input::-moz-focus-inner {
 
 /* Actions */
 
-	ul.actions {
+	.actions {
 		display: flex;
 		cursor: default;
 		list-style: none;
@@ -812,19 +797,19 @@ input::-moz-focus-inner {
 		padding-inline-start: 0;
 	}
 
-		ul.actions li {
+		.actions li {
 			padding: 0 0 0 1em;
 			vertical-align: middle;
 		}
 
 		@media screen and (max-width: 480px) {
-			ul.actions:not(.fixed) {
+			.actions:not(.fixed) {
 				flex-direction: column;
 				inline-size: 100% !important;
 				margin-inline-start: 0;
 			}
 
-				ul.actions:not(.fixed) li {
+				.actions:not(.fixed) li {
 					flex-grow: 1;
 					flex-shrink: 1;
 					padding: 1em 0 0;
@@ -832,11 +817,11 @@ input::-moz-focus-inner {
 					text-align: center;
 				}
 
-					ul.actions:not(.fixed) li > * {
+					.actions:not(.fixed) li > * {
 						inline-size: 100%;
 					}
 
-					ul.actions:not(.fixed) li:first-child {
+					.actions:not(.fixed) li:first-child {
 						padding-block-start: 0;
 					}
 
@@ -844,168 +829,28 @@ input::-moz-focus-inner {
 
 /* Icons */
 
-	ul.icons {
+	.icons {
 		padding-left: 0;
 		cursor: default;
 		list-style: none;
 	}
 
-		ul.icons li {
+		.icons li {
 			display: inline-block;
 			padding: 0 1em 0 0;
 		}
 
-			ul.icons li:last-child {
+			.icons li:last-child {
 				padding-right: 0;
 			}
 
-			ul.icons li > * {
+			.icons li > * {
 				border: 0;
 			}
 
-				ul.icons li > * .label {
+				.icons li > * .label {
 					display: none;
 				}
-
-/* Posts */
-
-	ul.posts {
-		padding: 0;
-		list-style: none;
-	}
-
-		ul.posts li {
-			padding: 1.5em 0 0;
-			border-top: dotted 1px rgb(255 152 0 / 30%);
-			margin: 1.5em 0 0;
-		}
-
-			ul.posts li:first-child {
-				padding-top: 0;
-				border-top: 0;
-				margin-top: 0;
-			}
-
-		ul.posts article {
-			display: flex;
-			flex-direction: row-reverse;
-			align-items: flex-start;
-		}
-
-			ul.posts article .image {
-				display: block;
-				width: 4em;
-				min-width: 4em;
-				margin-right: 1.5em;
-			}
-
-				ul.posts article .image img, ul.posts article .image video {
-					width: 100%;
-				}
-
-			ul.posts article header {
-				flex: 1;
-				flex-grow: 1;
-			}
-
-				ul.posts article header h3 {
-					margin-top: 0.125em;
-					font-size: 0.7em;
-				}
-
-				ul.posts article header .published {
-					display: block;
-					margin: -0.625em 0 1.7em;
-					font-family: Raleway, Helvetica, sans-serif;
-					font-size: 0.6em;
-					font-weight: 400;
-					letter-spacing: 0.25em;
-					text-transform: uppercase;
-				}
-
-				ul.posts article header > :last-child {
-					margin-bottom: 0;
-				}
-
-/* Mini Post */
-
-	.mini-post {
-		display: flex;
-		flex-direction: column-reverse;
-		border: solid 1px rgb(255 152 0 / 10%);
-		border-radius: 3.125rem;
-		margin: 0 0 2em;
-		background: rgb(20 19 33);
-	}
-
-		.mini-post .image {
-			overflow: hidden;
-			width: 100%;
-			border-top-left-radius: 3.125rem;
-			border-top-right-radius: 3.125rem;
-		}
-
-		.mini-post header {
-			position: relative;
-			min-height: 4em;
-			flex-grow: 1;
-			padding: 1.25em 4.25em 0.1em 1.25em ;
-		}
-
-			.mini-post header h3 {
-				font-size: 0.7em;
-			}
-
-			.mini-post header .published {
-				display: block;
-				margin: -0.625em 0 1.7em;
-				font-family: Raleway, Helvetica, sans-serif;
-				font-size: 0.6em;
-				font-weight: 400;
-				letter-spacing: 0.25em;
-				text-transform: uppercase;
-			}
-
-			.mini-post header .author {
-				position: absolute;
-				top: 2em;
-				right: 2em;
-			}
-
-	.mini-posts {
-		margin: 0 0 2em;
-	}
-
-		@media screen and (max-width: 1280px) {
-			.mini-posts {
-				display: flex;
-				width: calc(100% + 2em);
-				flex-wrap: wrap;
-			}
-
-				.mini-posts > * {
-					width: calc(50% - 2em);
-					margin: 2em 2em 0 0;
-				}
-
-				.mini-posts > :nth-child(-n + 2) {
-					margin-top: 0;
-				}
-
-		}
-
-		@media screen and (max-width: 480px) {
-			.mini-posts {
-				display: block;
-				width: 100%;
-			}
-
-				.mini-posts > * {
-					width: 100%;
-					margin: 0 0 2em;
-				}
-
-		}
 
 /* Post */
 
@@ -1016,7 +861,6 @@ input::-moz-focus-inner {
 		border-radius: 3.125rem;
 		margin: 0 0 3em;
 		background: rgb(20 19 33);
-
 	}
 
 		.post > header {
@@ -1157,7 +1001,7 @@ input::-moz-focus-inner {
 			list-style: none;
 		}
 
-			#header ul li {
+			#header li {
 				display: inline-block;
 				padding-left: 0;
 			}
@@ -1233,18 +1077,18 @@ input::-moz-focus-inner {
 				line-height: inherit;
 			}
 
-				#header .main ul li {
+				#header .main li {
 					height: inherit;
 					line-height: inherit;
 					white-space: nowrap;
 				}
 
-					#header .main ul li > * {
+					#header .main li > * {
 						display: block;
 						float: left;
 					}
 
-					#header .main ul li > a {
+					#header .main li > a {
 						position: relative;
 						overflow: hidden;
 						width: 4em;
@@ -1254,7 +1098,7 @@ input::-moz-focus-inner {
 						text-indent: 4em;
 					}
 
-						#header .main ul li > a::before {
+						#header .main li > a::before {
 							display: inline-block;
 							font-family: 'Font Awesome 5 Free';
 							-moz-osx-font-smoothing: grayscale;
@@ -1267,7 +1111,7 @@ input::-moz-focus-inner {
 							text-transform: none !important;
 						}
 
-						#header .main ul li > a::before {
+						#header .main li > a::before {
 							position: absolute;
 							top: 0;
 							left: 0;
@@ -1519,14 +1363,14 @@ input::-moz-focus-inner {
 			border-top: 0;
 		}
 
-			#menu nav > ul > li {
+			#menu nav li {
 				padding: 1.5em 0 0;
 				border: 0;
 				border-top: dotted 1px rgb(255 152 0 / 30%);
 				margin: 1.5em 0 0;
 			}
 
-				#menu nav > ul > li a {
+				#menu nav li a {
 					display: block;
 					border-bottom: 0;
 					color: var(--primary-text-color);
@@ -1539,7 +1383,7 @@ input::-moz-focus-inner {
 					transition: color 0.2s ease;
 				}
 
-					#menu nav > ul > li a p {
+					#menu nav li a p {
 						margin-bottom: 0;
 						font-family: Raleway, Helvetica, sans-serif;
 						font-size: 0.6em;
@@ -1549,11 +1393,11 @@ input::-moz-focus-inner {
 						text-transform: uppercase;
 					}
 
-					#menu nav > ul > li a:hover {
+					#menu nav li a:hover {
 						color: var(--accent-text-color);
 					}
 
-				#menu nav > ul > li:first-child {
+				#menu nav li:first-child {
 					padding-top: 0;
 					border-top: 0;
 					margin-top: 0;
