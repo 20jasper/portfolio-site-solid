@@ -6,6 +6,7 @@ import ContactForm from '@components/ContactForm.astro';
 import Pagination from '@components/Pagination/Pagination.astro';
 import Navigation from '@components/Navigation.astro';
 import HamburgerMenuIcon from '@components/Icons/HamburgerMenuIcon.astro';
+import Footer from '@components/Footer.astro';
 
 import projects from '@content/projects';
 
@@ -107,20 +108,6 @@ const { page }: Props = Astro.props;
 				isJobHunting={false}
 				pageIndex={page.currentPage}
 			/>
-			<!-- Footer -->
-			<section id="footer">
-				<p class="copyright">
-					&copy;
-					<a href="https://jacobasper.com/">Jacob Asper.</a>
-					Images:
-					<a
-						href="http://unsplash.com"
-						target="_blank"
-						rel="noreferrer noopener"
-						>Unsplash.</a
-					>
-				</p>
-			</section>
 		</aside>
 		<!-- Menu -->
 		<section id="menu">
@@ -135,6 +122,7 @@ const { page }: Props = Astro.props;
 			{page.data.map((project) => <Project {...project} />)}
 
 			<Pagination {page} />
+			<Footer />
 		</main>
 	</div>
 </Layout>
