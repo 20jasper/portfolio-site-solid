@@ -7,6 +7,11 @@
 	License: pixelarity.com/license
 */
 
+:root {
+	--primary-text-color: rgb(241 230 216);
+	--accent-text-color: rgb(255 152 0);
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -111,17 +116,27 @@ input::-moz-focus-inner {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: rgb(255 152 0) !important; 
+			color: var(--accent-text-color) !important; 
 		}
 
 			a:hover::before,
-			#copy:hover
-		{
-				color: rgb(255 152 0) !important;
+			#copy:hover{
+				color: var(--accent-text-color) !important;
+			}
+
+		a svg {
+			fill: var(--primary-text-color) !important; 
+		}
+
+			a:hover svg {
+				fill: var(--accent-text-color) !important; 
+				-moz-transition: fill 0.2s ease;
+				-webkit-transition: fill 0.2s ease;
+				transition: fill 0.2s ease;
 			}
 
 	strong, b {
-		color: rgb(241 230 216);
+		color: var(--primary-text-color);
 		font-weight: 700;
 	}
 
@@ -136,7 +151,7 @@ input::-moz-focus-inner {
 
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0 0 1em;
-		color: rgb(241 230 216);
+		color: var(--primary-text-color);
 		font-family: Raleway, Helvetica, sans-serif;
 		font-weight: 800;
 		letter-spacing: 0.25em;
@@ -316,7 +331,7 @@ input::-moz-focus-inner {
 		border: 0;
 		background-color: transparent;
 		box-shadow: inset 0 0 0 0.125rem rgb(255 152 0 / 20%);
-		color: rgb(241 230 216) !important;
+		color: var(--primary-text-color) !important;
 		cursor: pointer;
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.6em;
@@ -338,8 +353,8 @@ input::-moz-focus-inner {
 		button:hover,
 		.button:hover
 		{
-			box-shadow: inset 0 0 0 1px rgb(255 152 0);
-			color: rgb(255 152 0) !important;
+			box-shadow: inset 0 0 0 1px var(--accent-text-color);
+			color: var(--accent-text-color) !important;
 		}
 
 			input[type="submit"]:hover:active,
@@ -447,7 +462,7 @@ input::-moz-focus-inner {
 	label {
 		display: block;
 		margin: 0 0 1em;
-		color: rgb(241 230 216);
+		color: var(--primary-text-color);
 		font-size: 0.9em;
 		font-weight: 700;
 	}
@@ -616,16 +631,16 @@ input::-moz-focus-inner {
 
 		input[type="checkbox"]:checked + label::before,
 		input[type="radio"]:checked + label::before {
-			border-color: rgb(241 230 216);
-			background: rgb(241 230 216);
+			border-color: var(--primary-text-color);
+			background: var(--primary-text-color);
 			color: rgb(20 19 33);
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label::before,
 		input[type="radio"]:focus + label::before {
-			border-color: rgb(255 152 0);
-			box-shadow: 0 0 0 1px rgb(255 152 0);
+			border-color: var(--accent-text-color);
+			box-shadow: 0 0 0 1px var(--accent-text-color);
 		}
 
 	input[type="radio"] + label::before {
@@ -1067,7 +1082,7 @@ input::-moz-focus-inner {
 				.post > header .meta .published {
 					display: block;
 					margin-top: 0.5em;
-					color: rgb(241 230 216);
+					color: var(--primary-text-color);
 					font-family: Raleway, Helvetica, sans-serif;
 					font-size: 0.7em;
 					font-weight: 800;
@@ -1324,23 +1339,41 @@ input::-moz-focus-inner {
 			padding-left: 1.5em;
 			margin-left: 1.5em;
 			line-height: inherit;
+			display: flex;
+			align-items: center;
 		}
 
-			#header nav ul li {
+			#header nav ul {
+				inline-size: 100%;
+				display: flex;
+				align-items: center;
+			}
+
+			#header nav li {
 				padding-left: 1em;
 				margin-left: 1em;
 				line-height: 1;
+				display: flex;
+				align-items: center;
 			}
 
-				#header nav ul li:first-child {
+				#header nav li:first-child {
 					padding-left: 0;
 					border-left: 0;
 					margin-left: 0;
 				}
 
-				#header nav ul li a {
+				#header nav li:last-child {
+					margin-left: auto;
+					margin-right: 2rem;
+					
+					/* default hidden until shown by a media query */
+					display: none;
+				}
+
+				#header nav li a {
 					border-bottom: 0;
-					color: rgb(241 230 216);
+					color: var(--primary-text-color);
 					font-family: Raleway, Helvetica, sans-serif;
 					font-size: .8rem;
 					font-weight: 800;
@@ -1375,7 +1408,7 @@ input::-moz-focus-inner {
 						overflow: hidden;
 						width: 4em;
 						border-bottom: 0;
-						color: rgb(241 230 216);
+						color: var(--primary-text-color);
 						text-decoration: none;
 						text-indent: 4em;
 					}
@@ -1417,11 +1450,15 @@ input::-moz-focus-inner {
 				vertical-align: middle;
 			}
 
-		@media screen and (max-width: 980px) {
-			#header nav {
+		/* hide nav items on smaller screen sizes  */
+		@media screen and (max-width: 800px) {
+			#header nav li {
 				display: none;
 			}
 
+			#header nav li:last-child {
+				display: flex;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
@@ -1433,11 +1470,6 @@ input::-moz-focus-inner {
 				#header h1 {
 					padding: 0 0 0 1em;
 				}
-
-				#header .main .search {
-					display: none;
-				}
-
 		}
 
 /* Wrapper */
@@ -1483,14 +1515,6 @@ input::-moz-focus-inner {
 		body.single #wrapper {
 			display: block;
 		}
-
-/* Main */
-
-	#main {
-		width: 100%;
-		flex: 1;
-		flex-grow: 1;
-	}
 
 /* Sidebar */
 
@@ -1669,7 +1693,7 @@ input::-moz-focus-inner {
 				#menu nav > ul > li a {
 					display: block;
 					border-bottom: 0;
-					color: rgb(241 230 216);
+					color: var(--primary-text-color);
 					font-size: 0.7em;
 					font-size: 1rem;
 					font-weight: 800;
@@ -1691,7 +1715,7 @@ input::-moz-focus-inner {
 					}
 
 					#menu nav > ul > li a:hover {
-						color: rgb(255 152 0);
+						color: var(--accent-text-color);
 					}
 
 				#menu nav > ul > li:first-child {
@@ -1734,4 +1758,12 @@ input::-moz-focus-inner {
 /* video */
 video{
 	max-width: 100%;
+}
+
+/* font awesome */
+.font-awesome {
+	height: 1.5rem;
+	vertical-align: -.45rem;
+	fill: var(--primary-text-color);
+	/* margin: auto 0; */
 }
