@@ -575,26 +575,6 @@ input::-moz-focus-inner {
 			border-radius: 0;
 		}
 
-		.image.left, .image.right {
-			max-width: 40%;
-		}
-
-			.image.left img, .image.right img, .image.left video, .image.right video {
-				width: 100%;
-			}
-
-		.image.left {
-			top: 0.25em;
-			padding: 0 1.5em 1em 0;
-			float: left;
-		}
-
-		.image.right {
-			top: 0.25em;
-			padding: 0 0 1em 1.5em;
-			float: right;
-		}
-
 		.image.featured {
 			display: block;
 			width: 100%;
