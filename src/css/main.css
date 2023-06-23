@@ -240,26 +240,6 @@ input::-moz-focus-inner {
 		font-size: 0.9em;
 	}
 
-/* Box */
-
-	.box {
-		padding: 1.5em;
-		border: solid 1px rgb(255 152 0 / 30%);
-		margin-bottom: 2em;
-	}
-
-		.box > :last-child,
-		.box > :last-child > :last-child,
-		.box > :last-child > :last-child > :last-child {
-			margin-bottom: 0;
-		}
-
-		.box.alt {
-			padding: 0;
-			border: 0;
-			border-radius: 0;
-		}
-
 /* Button */
 
 	input[type="submit"],
