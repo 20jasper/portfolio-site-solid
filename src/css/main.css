@@ -318,14 +318,6 @@ input::-moz-focus-inner {
 			padding: 0 0.75em 0 0;
 		}
 
-		input[type="submit"].fit,
-		input[type="reset"].fit,
-		input[type="button"].fit,
-		button.fit,
-		.button.fit {
-			width: 100%;
-		}
-
 		input[type="submit"].large,
 		input[type="reset"].large,
 		input[type="button"].large,
@@ -333,14 +325,6 @@ input::-moz-focus-inner {
 		.button.large {
 			padding: 0 3em;
 			font-size: 0.7em;
-		}
-
-		input[type="submit"].small,
-		input[type="reset"].small,
-		input[type="button"].small,
-		button.small,
-		.button.small {
-			font-size: 0.5em;
 		}
 
 		input[type="submit"].disabled, 
@@ -423,43 +407,6 @@ input::-moz-focus-inner {
 		textarea:focus {
 			border-color: rgb(255 152 0 / 30%);
 			box-shadow: inset 0 0 0 1px rgb(255 152 0 / 70%);
-		}
-
-	.select-wrapper {
-		position: relative;
-		display: block;
-		text-decoration: none;
-	}
-
-		.select-wrapper::before {
-			display: inline-block;
-			font-family: 'Font Awesome 5 Free';
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 900;
-			line-height: 1;
-			text-rendering: auto;
-			text-transform: none !important;
-		}
-
-		.select-wrapper::before {
-			position: absolute;
-			top: 0;
-			right: 0;
-			display: block;
-			width: 2.75em;
-			height: 2.75em;
-			color: rgb(255 152 0 / 30%);
-			content: '\f078';
-			line-height: 2.75em;
-			pointer-events: none;
-			text-align: center;
-		}
-
-		.select-wrapper select::-ms-expand {
-			display: none;
 		}
 
 	select {
@@ -647,16 +594,6 @@ input::-moz-focus-inner {
 			padding: 0 0 1em 1.5em;
 			float: right;
 		}
-
-		.image.fit {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em;
-		}
-
-			.image.fit img, .image.fit video {
-				width: 100%;
-			}
 
 		.image.featured {
 			display: block;
