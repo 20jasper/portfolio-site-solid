@@ -592,41 +592,6 @@ input::-moz-focus-inner {
 
 			}
 
-/* List */
-
-	ol {
-		padding-left: 1.25em;
-		margin: 0 0 2em;
-		list-style: decimal;
-	}
-
-		ol li {
-			padding-left: 0.25em;
-		}
-
-	ul {
-		padding-left: 1em;
-		margin: 0 0 2em;
-	}
-
-		li {
-			padding-left: 0.5em;
-		}
-
-	dl {
-		margin: 0 0 2em;
-	}
-
-		dl dt {
-			display: block;
-			margin: 0 0 1em;
-			font-weight: 700;
-		}
-
-		dl dd {
-			margin-left: 2em;
-		}
-
 /* Actions */
 
 	.actions {
