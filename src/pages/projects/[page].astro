@@ -104,10 +104,6 @@ const { page }: Props = Astro.props;
 					MongoDB, Express, HTML, CSS, and React.
 				</p>
 			</section>
-			<ContactForm
-				isJobHunting={false}
-				pageIndex={page.currentPage}
-			/>
 		</aside>
 		<!-- Menu -->
 		<section id="menu">
@@ -122,6 +118,10 @@ const { page }: Props = Astro.props;
 			{page.data.map((project) => <Project {...project} />)}
 
 			<Pagination {page} />
+			<ContactForm
+				isJobHunting={true}
+				pageIndex={page.currentPage}
+			/>
 			<Footer />
 		</main>
 	</div>
