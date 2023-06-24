@@ -7,10 +7,11 @@ type Props = {
 const { isJobHunting, pageIndex } = Astro.props;
 ---
 
-<span
-	class="navigation"
-	id="contactMe"
->
+<>
+	<span
+		class="navigation"
+		id="contactMe"
+	></span>
 	<form
 		name=`contact-page-${pageIndex}`
 		method="POST"
@@ -44,4 +45,4 @@ const { isJobHunting, pageIndex } = Astro.props;
 		</label>
 		<button type="submit">Submit</button>
 	</form>
-</span>
+</>
