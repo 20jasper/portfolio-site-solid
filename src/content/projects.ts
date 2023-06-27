@@ -72,7 +72,7 @@ const projects: Project[] = [
 	{
 		projectName: 'PAIHS Portfolios',
 		demoUrl: 'https://paihsportfolios.netlify.app/',
-		description: 'Track your monthly expenses',
+		description: 'An introduction to PBATS and Mentoring at PAIHS',
 		media: {
 			mediaType: 'image',
 			src: 'https://user-images.githubusercontent.com/78604367/190449712-5d834ec4-354c-4a35-953b-47ff17f5c5b1.png',
