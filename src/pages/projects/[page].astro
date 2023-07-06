@@ -7,6 +7,7 @@ import Pagination from '@components/Pagination/Pagination.astro';
 import Navigation from '@components/Navigation.astro';
 import HamburgerMenuIcon from '@components/Icons/HamburgerMenuIcon.astro';
 import Footer from '@components/Footer.astro';
+import AboutMe from '@components/AboutMe.astro';
 
 import projects from '@content/projects';
 
@@ -90,20 +91,7 @@ const { page }: Props = Astro.props;
 					</ul>
 				</header>
 			</section>
-			<!-- About Me -->
-			<span
-				class="navigation"
-				id="aboutMe"
-			></span>
-			<section class="blurb">
-				<h2>About me</h2>
-				<p>
-					Community taught software engineer with a proven track record of
-					creating and implementing successful front and back end web
-					applications. Skilled in solving problems with JavaScript, Node,
-					MongoDB, Express, HTML, CSS, and React.
-				</p>
-			</section>
+			<AboutMe />
 		</aside>
 		<!-- Menu -->
 		<section id="menu">
