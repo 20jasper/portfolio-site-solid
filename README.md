@@ -1,44 +1,30 @@
-# portfolio site solid
+# Portfolio Site Astro
 
-Jacob Asper's web development portfolio—now in solid!
+Jacob Asper's web development portfolio—now in astro!
 
-## motivations
+[Live site](https://jacobasper.com/)
+![A website showcasing projects, social media links and an about me section](https://github.com/20jasper/portfolio-site-astro/assets/78604367/12da9414-fd4a-4eeb-8ffb-2bd9fbea0972)
 
-[My original portfolio](https://github.com/20jasper/portfolio-site) built in pure HTML, CSS, and JavaScript became a bit cumbersome to work with once there were enough projects to warrant pagination. Not only did I need to move all the projects back after I finished a new one, I needed to create a new form in Netlify for each page.
+## Motivations
 
-Migrating to [Solid](https://www.solidjs.com/) will solve these problems with little overhead, and I'm interested in trying out another JavaScript framework anyways!
+[My original portfolio](https://github.com/20jasper/portfolio-site) is built in pure HTML, CSS, and JavaScript, so as it grew, it became cumbersome to update. Once there were enough projects to warrant pagination, not only did I need to move all the projects to across pages manually, I needed to create a new form in Netlify for each page.
 
-## scripts
+Migrating to [Astro](https://astro.build/) will help quite a bit with these issues since it offers built in pagination and components. The cherry on top is that astro uses SSG, so there won't be any performance cost!
 
-- `build` build for production
-- `start` start dev server
-- `start:prod` build and start prod server
-- `lint` check for eslint or astro errors/warnings
-- `lint:fix` fix any autofixable eslint warnings
-- `lint:ci` like `lint`, but errors on any eslint warnings
-- `verify-types` check for typescript errors
-- `test` run tests
+## How It's Made
 
-## 🚀 Project Structure
+**Tech used:** HTML, CSS, TypeScript, Astro
 
-Inside of your Astro project, you'll see the following folders and files:
+I started with my original portfolio site, and slowly started to convert it into components. Along the way, I removed unused CSS, improved accessibility, and reduced redundancy with loops.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+<!--
+## Optimizations
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+_(optional)_
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+You don't have to include this section but interviewers _love_ that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Lessons Learned:
+
+No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those _whoa this is awesome_ or _fuck yeah I did it!_ moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+-->
