@@ -3,6 +3,7 @@
 Jacob Asper's web development portfolio—now in astro!
 
 [Live site](https://jacobasper.com/)
+![A website showcasing projects, social media links and an about me section](https://github.com/20jasper/portfolio-site-astro/assets/78604367/12da9414-fd4a-4eeb-8ffb-2bd9fbea0972)
 
 ## motivations
 
