@@ -2,6 +2,7 @@ import fullStackInterviewQuestions from '@images/fullStackInterviewQuestions.mp4
 import ticTacToe from '@images/ticTacToe.mp4';
 import theMidnightDuck from '@images/theMidnightDuck.jpg';
 import ronaldosBurgers from '@images/ronaldosBurgers.jpg';
+import portfolioSiteAstro from '@images/portfolioSiteAstro.webp';
 
 type Image = {
 	mediaType: 'image';
@@ -26,6 +27,19 @@ export type Project = {
 };
 
 const projects: Project[] = [
+	{
+		projectName: 'portfolio site astro',
+		demoUrl: 'https://jacobasper.com/',
+		description: "Jacob Asper's web development portfolio—now in astro!",
+		media: {
+			mediaType: 'image',
+			src: portfolioSiteAstro,
+			altText:
+				'The home page of five line rhyme. There are a few user–submitted poems to readA website showcasing projects, social media links and an about me section',
+		},
+		techUsed: ['TypeScript', 'Astro', 'CSS', 'Astro'],
+		gitHubUrl: 'https://github.com/20jasper/portfolio-site-astro',
+	},
 	{
 		projectName: 'five line rhyme',
 		demoUrl: 'https://five-line-rhyme.up.railway.app/',
