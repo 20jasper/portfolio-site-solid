@@ -43,6 +43,20 @@ const projects: Project[] = [
 		gitHubUrl: 'https://github.com/20jasper/portfolio-site-astro',
 	},
 	{
+		projectName: 'Interview Question API GraphQL',
+		demoUrl: null,
+		description: 'Query full stack interview questions by category',
+		media: {
+			mediaType: 'video',
+			srcType: 'video/mp4',
+			src: fullStackInterviewQuestions,
+			altText:
+				'An animation of a button being clicked and a question showing up',
+		},
+		techUsed: ['Rust', 'GraphQL', 'axum'],
+		gitHubUrl: 'https://github.com/20jasper/interview_question_api_graphql',
+	},
+	{
 		projectName: 'five line rhyme',
 		demoUrl: 'https://five-line-rhyme.up.railway.app/',
 		description: 'A collection of poems only five lines long',
