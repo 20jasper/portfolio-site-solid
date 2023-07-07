@@ -1,12 +1,12 @@
 ---
-import type { Project } from '@content/projects';
+import type { Project, ProjectUrl } from '@content/projects';
 
 type Props = Pick<Project, 'demoUrl' | 'gitHubUrl'>;
 
 const { demoUrl, gitHubUrl } = Astro.props;
 
 type ProjectLink = {
-	url: string | null;
+	url: ProjectUrl;
 	text: string;
 };
 const projectLinks: ProjectLink[] = [

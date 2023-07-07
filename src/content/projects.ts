@@ -16,10 +16,12 @@ type Video = {
 	srcType: string;
 };
 
+/** `string` if url exists, `null` otherwise */
+export type ProjectUrl = string | null;
+
 export type Project = {
-	demoUrl: string;
-	/** string if url exists, null otherwise */
-	gitHubUrl: string | null;
+	demoUrl: ProjectUrl;
+	gitHubUrl: ProjectUrl;
 	projectName: string;
 	description: string;
 	media: Image | Video;
@@ -39,6 +41,20 @@ const projects: Project[] = [
 		},
 		techUsed: ['TypeScript', 'Astro', 'CSS', 'Astro'],
 		gitHubUrl: 'https://github.com/20jasper/portfolio-site-astro',
+	},
+	{
+		projectName: 'Interview Question API GraphQL',
+		demoUrl: null,
+		description: 'Query full stack interview questions by category',
+		media: {
+			mediaType: 'video',
+			srcType: 'video/mp4',
+			src: fullStackInterviewQuestions,
+			altText:
+				'An animation of a button being clicked and a question showing up',
+		},
+		techUsed: ['Rust', 'GraphQL', 'axum'],
+		gitHubUrl: 'https://github.com/20jasper/interview_question_api_graphql',
 	},
 	{
 		projectName: 'five line rhyme',
