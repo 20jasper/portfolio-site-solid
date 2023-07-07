@@ -27,9 +27,15 @@ export function getStaticPaths({
 }
 
 const { page }: Props = Astro.props;
+/** used for meta description and about me */
+const DESCRIPTION =
+	'Community taught software engineer with experience in front-end and back-end development, cloud infrastructure, and QA testing';
 ---
 
-<Layout title="Jacob Asper">
+<Layout
+	title="Jacob Asper"
+	description={DESCRIPTION}
+>
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Header -->
@@ -91,7 +97,7 @@ const { page }: Props = Astro.props;
 					</ul>
 				</header>
 			</section>
-			<AboutMe />
+			<AboutMe description={DESCRIPTION} />
 		</aside>
 		<!-- Menu -->
 		<section id="menu">
