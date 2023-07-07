@@ -16,10 +16,12 @@ type Video = {
 	srcType: string;
 };
 
+/** `string` if url exists, `null` otherwise */
+export type ProjectUrl = string | null;
+
 export type Project = {
-	demoUrl: string;
-	/** string if url exists, null otherwise */
-	gitHubUrl: string | null;
+	demoUrl: ProjectUrl;
+	gitHubUrl: ProjectUrl;
 	projectName: string;
 	description: string;
 	media: Image | Video;
